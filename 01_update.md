@@ -1,12 +1,13 @@
-Impact of COVID-19 on refugees and migrants
+Impact of COVID-19 on refugees and migrants, Update 1
 ================
-Mixed Migration Centre, Geneva, 1st Update of 27 April 2020
+Mixed Migration Centre, 27 April 2020
 
  
 
 **This is the first update on the situation for refugees and migrants on
 mixed migration routes around the world in light of the COVID-19
-pandemic. Using data collected by MMC, the objective of the global
+pandemic. Using data collected by the [Mixed Migration
+Centre](http://www.mixedmigration.org/), the objective of the global
 updates is to provide regular up-to-date findings on COVID-19 awareness,
 knowledge and risk perception, access to information, access to
 healthcare, assistance needs and the impact on refugees’ and migrants’
