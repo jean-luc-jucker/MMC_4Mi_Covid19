@@ -634,10 +634,6 @@ fig1  <- fig1_data %>%
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
 fig1
 
-scale_x_discrete(breaks=c("0.5","1","2"),
-                   labels=c("Dose 0.5", "Dose 1", "Dose 2"))
-
-
 #Figure 2, Who did you receive information from?####
 fig2_data <- data %>% 
   select(189, 190, 55:70) %>%
@@ -800,27 +796,6 @@ fig6 <- fig6_data %>%
   theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
 fig6
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # NOT RUN {

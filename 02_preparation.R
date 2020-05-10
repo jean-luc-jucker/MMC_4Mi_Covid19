@@ -135,7 +135,7 @@ save(data, file = "rda/02_cleaned_data_20200430.rda")
 #csv
 write.csv(data, "data_outputs/02_cleaned_data_20200430_bis.csv")
 
-
+ 
 
 
 
