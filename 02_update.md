@@ -1,0 +1,372 @@
+Impact of COVID-19 on refugees and migrants, Update 2
+================
+Mixed Migration Centre, 11 May 2020
+
+<style>
+body {
+text-align: justify}
+</style>
+
+ 
+
+**This is the second update on the situation for refugees and migrants
+on mixed migration routes around the world in light of the COVID-19
+pandemic based on data collected by the [Mixed Migration
+Centre](http://www.mixedmigration.org/) in North Africa, West Africa and
+Latin America. The objective of the global updates is to provide regular
+up-to-date findings on COVID-19 awareness, knowledge and risk
+perception, access to information, access to healthcare, assistance
+needs and the impact on refugees’ and migrants’ lives and migration
+journeys. Published once every two weeks, this series provides an
+aggregated overview; more detailed, thematic and response-oriented
+COVID-19 snapshots are also developed in each of the MMC regional
+offices and available
+[here](http://www.mixedmigration.org/resource-type/covid-19/).**
+
+## Key Messages
+
+• Interviewed refugees and migrants across all three regions are well
+aware of the coronavirus. A large majority considers they know how to
+protect themselves and others, though this proportion is lower among
+respondents in West Africa (81%), and particularly Burkina Faso (75%),
+than in Latin America (98%) and North Africa (85%)
+
+• Protective measures taken by refugees and migrants vary widely across
+regions. Staying at home and isolating from others is much more frequent
+in Latin America (89%) than in North Africa (57%) and West Africa (11%).
+Similarly, in Latin America 90% of respondents think they can keep 1.5
+metre distance from others, while in North Africa (47%) and West Africa
+(34%) these percentages are much lower
+
+• Sources of information on coronavirus for interviewed refugees and
+migrants differ between regions. In Latin America the main source is the
+national government (70%), in West Africa other migrants (65%) and in
+North Africa the online community (55%)
+
+• Across regions only 42% of respondents believe they would be able to
+access healthcare if they had coronavirus symptoms. The barriers to
+accessing healthcare vary widely: discrimination against foreigners is
+the most important barrier in North Africa (44%), while it is far less
+often mentioned in West Africa (8%). Lack of legal documentation is an
+important barrier in Latin America (49%), while seldom reported in West
+Africa (6%). Lack of money is an important barrier across all three
+regions, particularly in West Africa (47%)
+
+• Across regions, 86% of respondents stated that they are in need of
+extra help since the COVID-19 crisis began, but only 21% have received
+additional assistance, with a minimum of 7% in Libya. Specific needs
+differ across regions but cash and basic needs such as food, water and
+shelter are most commonly cited
+
+• The extent to which the increased difficulty of crossing borders
+affects refugees and migrants clearly differs across the three regions
+(19% in Latin America, 31% in North Africa and 65% in West Africa). This
+suggests that respondents in West Africa are the most mobile and are
+generally still in transit, but are now stuck
+
+## Respondents
+
+1,173 respondents were interviewed between 6 and 26 April 2020: 313 in
+Latin America, 516 in North Africa, and 344 in West Africa, in the
+following countries:
+
+|    Region     |   Country    | Number of respondents | Percent women | Mean age |
+| :-----------: | :----------: | :-------------------: | :-----------: | :------: |
+| Latin America |   Colombia   |          250          |      71       |    34    |
+|               |     Peru     |          63           |      51       |    32    |
+| North Africa  |    Libya     |          211          |      30       |    31    |
+|               |   Tunisia    |          305          |      33       |    29    |
+|  West Africa  | Burkina Faso |          98           |      42       |    29    |
+|               |     Mali     |          101          |      24       |    27    |
+|               |    Niger     |          145          |      27       |    30    |
+|    Overall    |              |         1173          |      41       |    30    |
+
+## Methodology
+
+A summary of the methodology can be found
+[here](http://www.mixedmigration.org/4mi/4mi_faq/). All figures are
+rounded to the nearest whole number. Figures for countries where the
+number of interviews is less than or around 100 should be interpreted
+with caution. Unless specified, the number of observations for all
+analyses and visualisations corresponds to those presented in the above
+table. Also note that for most items of the questionnaire, respondents
+can select several answer options. Finally, note that one inconsistency
+between the regions’ questionnaires meant that a few ‘none’ answer
+options could not be included in all analyses.
+
+This second global update reports on Latin America, North Africa, and
+West Africa, which is where MMC first rolled out the adapted 4Mi
+COVID-19 survey. Data collection has also started in East Africa and
+Asia, and future updates will include data from these regions.
+
+## Awareness, knowledge and risk perception
+
+Knowledge of COVID-19 is high among respondents, but less than 2% (n =
+22, with 28 refused answers) have been tested. All 1,173 respondents
+reported that they had heard of COVID-19, and across all regions, 93%
+reported seeing people acting more cautiously since the beginning of the
+crisis, with a minimum of 89% in Burkina Faso, and a maximum of 97% in
+Libya.
+
+Similarly, across all regions, at least 9 respondents out of 10 agreed
+or strongly agreed that they are worried about catching coronavirus.
+More than two-thirds of all participants agreed or strongly agreed that
+they are worried about transmitting the coronavirus, with figures
+ranging from 69% (West Africa) to 78% (Latin America) between regions.
+Overall, 88% of respondents also stated that they know how to protect
+themselves and protect others, with a range of 81% (West Africa) to 98%
+(Latin America) across regions.
+
+Respondents are well aware of the symptoms of coronavirus but less
+frequently indicated that the virus can also be asymptomatic (14%
+overall), especially in Colombia (5%) and Mali (8%). Respondents know
+which groups are more at risk, with older people cited more frequently
+(84% overall), followed by people who are already ill with another
+condition (57%), and health workers (37%). This order is the same across
+all regions and countries, with two exceptions: in Burkina Faso, adults
+(34%) and pregnant women (27%) are cited more frequently than health
+workers (22%), and in Mali, children under five (37%) are cited more
+frequently than health workers (33%). This suggests that some key
+messages about the specificity of COVID-19 compared to other common
+diseases, which affects predominantly children, have not yet reached
+some locations.
+
+A vast majority of respondents take measures to protect themselves, with
+washing hands more regularly (80% overall), wearing a mask (63%) and
+staying at home or isolating from others (52%) being the most commonly
+cited. There are, however, notable differences between regions and
+countries. Wearing a mask is more frequent in Latin America (78%) than
+in West Africa (63%) and North Africa (54%). Likewise, staying at home
+and isolating from others is much more frequent in Latin America (89%)
+than in North Africa (57%) and West Africa (11%). In Mali and Burkina
+Faso, only 6% and 7% of respondents reported staying at home,
+respectively, compared to 90% in Colombia. Furthermore, respondents in
+West Africa are less likely to report avoiding crowded spaces (22%) and
+keeping distance from other people (20%) than respondents in North
+Africa (55% and 43%, respectively). Only 21% of respondents in Latin
+America report avoiding crowded spaces and only 29% report keeping
+distance from other people, but that might be explained by the fact that
+89% of Latin America respondents reported staying at home or isolating
+from others.
+
+Similarly, the number of respondents reporting that they are able to
+keep the recommended 1.5 metre distance differs across regions and is
+lower in West Africa (see Figure 1) and Tunisia (39%).
+
+***Figure 1: Do you think you are able to practice 1.5 metre
+distancing?***
+
+<img src="02_update_files/figure-gfm/1-1.png" style="display: block; margin: auto auto auto 0;" />
+   
+
+Very few respondents (5% overall) reported not doing anything to protect
+themselves against coronavirus, although it is possible that respondents
+are reporting the measures that they are supposed to take, rather than
+the measures they are taking. There are also large differences between
+countries. In Burkina Faso and Niger, 22% and 10% reported not doing
+anything, respectively, whereas not a single participant reported so in
+Latin America. This figure was close to or below 5% for respondents in
+other countries.
+
+  
+
+## Access to information
+
+There is a clear difference in terms of sources of information between
+regions, see Figure 2. In Latin America the national government is the
+most commonly used source of information (70%), while in North Africa
+and West Africa the figure is 49% and 39%, respectively. In West Africa,
+other migrants (65% in the whole region, and up to 73% in Niger) were
+cited more often, while in North Africa, the online community (55%) was
+also more often cited as the main source of information on coronavirus
+than the government. Furthermore, 36% of respondents in Mali and 26% of
+respondents in Niger cited smugglers, which is higher than in all other
+countries (range: 0 to 8%).
+
+***Figure 2: Who did you receive information on COVID-19 from?***
+
+<img src="02_update_files/figure-gfm/2-1.png" style="display: block; margin: auto auto auto 0;" />
+   
+
+Across regions, however, the government is seen as the most trustworthy
+source of information (Latin America: 51%; North Africa: 53%; West
+Africa: 40%), followed by health professionals (range across regions:
+36% to 49%). In West Africa, other refugees and migrants are also seen
+as trustworthy (34%), more so than among respondents in North Africa
+(11%) and Latin America (1%).
+
+Most participants received information on the virus via the media (73%
+overall), social media (60%), or in-person (48%), with in-person
+communication seeming more important in West Africa (61%) than in the
+other regions (Latin America: 40%; North Africa: 45%), in line with the
+higher reliance on other migrants as a source of information. In West
+Africa, the media used were also more mixed than in other regions. For
+example, respondents in West Africa also used more phone calls (54%) and
+street advertising (35%) than respondents in other regions. Out of all
+participants who reported using social media (n=700), 86% and 80%
+reported using Facebook and WhatsApp, respectively.
+
+  
+
+## Access to healthcare and prevention
+
+Overall, only 42% of participants believe they would be able to access
+healthcare if they had coronavirus symptoms, with some differences
+between regions (West Africa: 50%; Latin America: 45%; North Africa:
+35%), and more importantly between countries (63% in Niger, but 37% in
+Burkina Faso; 52% in Colombia, but only 16% in Peru, although note the
+number of interviews is low in Peru). It is also important to note that
+there is a high level of uncertainty, with 27% of participants across
+regions simply not knowing whether they would be able to access
+healthcare in case of need, with the higher percentages in Mali (39%)
+and Libya (34%).
+
+When asked about the main barriers to accessing healthcare, respondents
+cited lack of money (41% overall), discrimination against foreigners
+(28%), and not knowing where to go for healthcare (23%), with again
+important differences between regions, see Figure 3. Discrimination
+against foreigners is the most frequently cited barrier in North Africa
+(44%, compared to 24% in Latin America and 8% in West Africa), and up to
+55% in Tunisia (and 54% in Peru).
+
+***Figure 3: What are the barriers to accessing healthcare?***
+
+<img src="02_update_files/figure-gfm/3-1.png" style="display: block; margin: auto auto auto 0;" />
+   
+
+A lack of legal documentation is also an important barrier in Latin
+America (49%), but less reported in North Africa (20%), and much less in
+West Africa (6%), arguably because respondents in Burkina Faso, Mali,
+and Niger are primarily from countries that are also part of ECOWAS
+which means they have, in theory, regular status in the country of
+interview. Finally, although general insecurity and conflict is not
+mentioned as a barrier in Latin America and West Africa (both close to
+0%), 10% of respondents in Libya mention general insecurity as a barrier
+to access healthcare. In contrast, 18% of respondents in North Africa
+mention not speaking the language as a barrier, while the figure is
+between 0 and 3% in other regions, where there is in most cases a common
+language spoken by both respondents and the host country.  
+
+## Assistance needs
+
+Out of all respondents, 86% stated that they are in need of extra help
+since the COVID-19 crisis began, with marginal differences between
+regions. Out of these 1,014 respondents, the most frequently needs cited
+were cash (74% overall) basic needs such as food, water and shelter
+(69%), and sanitary items such as sanitizer and masks (43%), but this
+time with important differences between regions. For example, 82% of
+respondents in West Africa mentioned cash, whereas the figure was 59% in
+Latin America. In contrast, basic goods were mentioned more frequently
+in Latin America (89%) than in North Africa (70%) and West Africa (38%).
+
+Overall, 21% of respondents stated that they had received additional
+assistance since the coronavirus crisis began, with higher figures in
+Latin America (32%) than in West Africa (21%) and North Africa (15%,
+with a minimum of 7% in Libya). For these 249 participants who received
+assistance, it was predominantly basic needs (71%), followed by sanitary
+items, information about the virus, and cash, these last three all being
+cited by roughly one quarter of all participants who received
+assistance. There were differences between countries (for example, in
+West Africa, 39% of respondents received information about the virus,
+although the figure in Mali alone was 95%), however figures by country
+should be interpreted with caution, since the number of interviews, and
+especially of people who received assistance, is still very low. That
+being said, overall and across regions, a clear trend is emerging with a
+noticeable gap between extra assistance received (21%) and needed (86%),
+except for basic needs and information about the virus, as shown in
+Figure 4.
+
+  
+***Figure 4: Kind of assistance received (bars) vs. assistance needed
+(lines)***
+
+<img src="02_update_files/figure-gfm/4-1.png" style="display: block; margin: auto auto auto 0;" />
+   
+
+Overall, the main providers of additional assistance were NGOs (41%, and
+up to 63% in West Africa), the local population (32%), and the
+government (27%), except in Libya, where family and friends were more
+frequently cited (64%), and assistance most frequently took the form of
+cash.
+
+## Impact on refugees’ and migrants’ lives
+
+Overall, the main impact of COVID-19 on refugees and migrants is reduced
+access to work (68%), followed by more stress (59%), and reduced
+availability of basic goods (51%), with increased racism (20%) and
+reduced access to asylum (13%) relatively less reported, see Figure 5.
+Reduced access to basic goods is more of an issue among respondents in
+Latin America (66%) than in North Africa (57%) and West Africa (27%),
+whereas the opposite is true for reduced access to asylum (Latin America
+5%, West Africa 10%, North Africa 20%).
+
+  
+
+***Figure 5: What impact has the crisis had on your day-to-day life?***
+
+<img src="02_update_files/figure-gfm/5-1.png" style="display: block; margin: auto auto auto 0;" />
+   
+
+Furthermore, just about two-thirds of all respondents reported that they
+had lost income due to coronavirus restrictions, with higher figures in
+Latin America (89%) than in North Africa (60%) and West Africa (51%).
+Across all countries, the lowest percentage observed was in Mali, with
+37% stating they had lost income. This could be linked with refugees and
+migrants in Latin America being perhaps more likely to have had some
+sort of income, while perhaps people in North Africa and West Africa
+were less likely to be working before the crisis.
+
+## Impact on migration journeys
+
+Unsurprisingly, the COVID-19 crisis has had an impact on refugees’ and
+migrants’ journeys, but with important differences across regions and
+countries, see Figure 6. Among those who stated that the crisis had no
+impact on their journey, there was a much higher percentage in Latin
+America (48%) than in North Africa (13%) and West Africa (6%). Overall,
+20% said they were simply too afraid to either continue their journey or
+return home. Across countries, increased risk of detention and
+deportation seem higher in Libya (26%) and Niger (18%) than in other
+countries.
+
+The extent to which the increased difficulty of crossing borders affects
+refugees and migrants clearly differs across the three regions, with 19%
+citing this in Latin America, 31% in North Africa and 65% in West
+Africa. This probably reflects the higher mobility of the respondents in
+West Africa, who are generally still in transit, but now stuck. This
+matches with the finding that there are notable differences between the
+percentages saying they had not reached the end of their journey (11% in
+Latin America, 74% in North Africa and 83% in West Africa).
+
+  
+
+***Figure 6: What impact has the coronavirus crisis had on your
+migration journey?***
+
+<img src="02_update_files/figure-gfm/6-1.png" style="display: block; margin: auto auto auto 0;" />
+
+   
+
+Furthermore, just over half of all respondents (52%) stated that they
+had not changed their plans as a result of the coronavirus outbreak;
+this percentage is much higher in Latin America (73%) than in North
+Africa and West Africa (both 44%). Across countries, there is also a
+sharp contrast between respondents who would like to continue their
+journey but are stuck, and those who would like to return home. In
+Colombia and Peru, less than 6% said they were stuck and in Peru 24%
+would like to return home, whereas in Libya and Niger, up to 43% are
+stuck and less than 7% would like to return home, again confirming the
+transit nature of refugees and migrants in West Africa and, to a
+slightly lesser extent in North Africa, compared with the respondents in
+Colombia and Peru. Overall, only 2% and 9% of respondents had changed
+their intended destination or planned route, respectively, with
+relatively small differences between countries.
+
+  
+
+### Acknowledgement
+
+The owner and source of the data used for this study is the [Mixed
+Migration Centre](http://www.mixedmigration.org/), and this study has
+been published first
+[here](http://www.mixedmigration.org/resource-type/covid-19/) on 11 May
+2020. Data analyst: Jean-Luc Jucker, PhD
