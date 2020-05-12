@@ -886,13 +886,6 @@ data %>%
   mutate(Percent=round(n/sum(n)*100, digits = 1))
 
 
-
-
-
-
-
-
-
 fig1_data <- data %>%
   group_by(Region, c31) %>% 
   tally() %>% 
@@ -911,32 +904,6 @@ fig1  <- fig1_data %>%
   theme(legend.position = c(0.70, 0.95), legend.direction = "horizontal", legend.title = element_blank())+
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
 fig1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #app template####
