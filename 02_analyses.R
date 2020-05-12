@@ -809,4 +809,164 @@ plot(fig4)
 dev.off() #turn off device and finalize file
 # }
 
-  
+#TABLE####
+table_demographics <- data.frame(Region=c("Latin America", "", "North Africa", "", "West Africa", "", "", "Overall"), Country=c("Colombia", "Peru", "Libya", "Tunisia", "Burkina Faso", "Mali", "Niger", ""), n=c(250, 63, 211, 305, 98, 101, 145, 1173), `Percent women` = c(71, 51, 30, 33, 42, 24, 27, 41), `Mean age`=c(34, 32, 31, 29, 29, 27, 30, 30)) %>% print()
+?kable
+
+
+
+#SHINY APP####
+library(shiny)
+
+ui <- fluidPage(
+  radioButtons(inputId = "location",
+              label = "Location",
+              choices = levels(data$Region)),
+  plotOutput("bar")
+)
+
+server <- function(input, output) {
+  output$bar  <- renderPlot({
+    fig1_data %>% 
+      mutate(c31=fct_relevel(c31, "Refused", "Don´t know", "No", "Yes")) %>% 
+      ungroup() %>% 
+      ggplot(aes(fill=c31, y=Percent))+
+      geom_col(aes(x=input$location, y=Percent), width = 0.47, position = "dodge")+
+      xlab("")+
+      theme_bw()+
+      theme(legend.title = element_blank())+
+      theme(legend.position = c(0.70, 0.95), legend.direction = "horizontal", legend.title = element_blank())+
+      scale_fill_discrete(guide = guide_legend(reverse = TRUE))+
+      coord_flip()
+    
+    
+  })
+}
+
+shinyApp(ui = ui, server = server)
+
+
+#SHINY APP 2####
+library(shiny)
+
+ui <- fluidPage(
+  radioButtons(inputId = "location",
+               label = "Location",
+               choices = levels(data$Region)),
+  plotOutput("bar")
+)
+
+server <- function(input, output) {
+  output$bar  <- renderPlot({
+    data %>%
+      group_by(Region, c31) %>% 
+      tally() %>% 
+      mutate(Percent=round(n/sum(n)*100, digits = 1)) %>% 
+      mutate(c31=fct_relevel(c31, "Refused", "Don´t know", "No", "Yes")) %>% 
+      ungroup() %>% 
+      ggplot(aes(fill=c31, y=Percent))+
+      geom_col(aes(x=input$location, y=Percent), width = 0.47, position = "dodge")+
+      xlab("")+
+      theme_bw()+
+      theme(legend.title = element_blank())+
+      theme(legend.position = c(0.70, 0.95), legend.direction = "horizontal", legend.title = element_blank())+
+      scale_fill_discrete(guide = guide_legend(reverse = TRUE))+
+      coord_flip()
+    
+    
+  })
+}
+
+shinyApp(ui = ui, server = server)
+
+
+data %>%
+  group_by(Region, c31) %>% 
+  tally() %>% 
+  mutate(Percent=round(n/sum(n)*100, digits = 1))
+
+
+
+
+
+
+
+
+
+fig1_data <- data %>%
+  group_by(Region, c31) %>% 
+  tally() %>% 
+  mutate(Percent=round(n/sum(n)*100, digits = 1)) %>% print()
+fig1  <- fig1_data %>% 
+  mutate(c31=fct_relevel(c31, "Refused", "Don´t know", "No", "Yes")) %>% 
+  ungroup() %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America")) %>% 
+  ggplot(aes(fill=c31, y=Percent))+
+  geom_col(aes(x=Region, y=Percent), width = 0.47)+
+  xlab("")+
+  theme_bw()+
+  coord_flip()+
+  scale_y_continuous(breaks = seq(0, 100, by = 10))+
+  theme(legend.title = element_blank())+
+  theme(legend.position = c(0.70, 0.95), legend.direction = "horizontal", legend.title = element_blank())+
+  scale_fill_discrete(guide = guide_legend(reverse = TRUE))
+fig1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#app template####
+ui <- fluidPage(
+  sliderInput(inputId = "num",
+              label = "Choose a number",
+              value = 25, min = 1, max = 100),
+  plotOutput("hist")
+)
+
+server <- function(input, output) {
+  output$hist  <- renderPlot({
+    hist(rnorm(input$num)) #note we take 'num' from inputId above--this is the number defined by the user. Yes in other words, the input of the user defines the output to return
+  })
+}
+
+shinyApp(ui = ui, server = server)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
