@@ -1,6 +1,6 @@
 ---
 title: "Impact of COVID-19 on refugees and migrants, Update 2"
-author: "Mixed Migration Centre, 11 May 2020"
+author: "Mixed Migration Centre, 12 May 2020"
 date: ""
 output: github_document
 ---
@@ -344,7 +344,7 @@ Furthermore, just over half of all respondents (52%) stated that they had not ch
   
 ### Acknowledgement 
 
-The owner and source of the data used for this study is the [Mixed Migration Centre](http://www.mixedmigration.org/), and this study has been published first [here](http://www.mixedmigration.org/resource-type/covid-19/) on 11 May 2020. Data analyst: Jean-Luc Jucker, PhD  
+The owner and source of the data used for this study is the [Mixed Migration Centre](http://www.mixedmigration.org/), and this study has been published first [here](http://www.mixedmigration.org/resource-type/covid-19/) on 12 May 2020. Data analyst: Jean-Luc Jucker, PhD  
 \  
 \  
 \  

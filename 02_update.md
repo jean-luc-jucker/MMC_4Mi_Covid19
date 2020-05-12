@@ -1,6 +1,6 @@
 Impact of COVID-19 on refugees and migrants, Update 2
 ================
-Mixed Migration Centre, 11 May 2020
+Mixed Migration Centre, 12 May 2020
 
 <style>
 body {
@@ -368,5 +368,5 @@ relatively small differences between countries.
 The owner and source of the data used for this study is the [Mixed
 Migration Centre](http://www.mixedmigration.org/), and this study has
 been published first
-[here](http://www.mixedmigration.org/resource-type/covid-19/) on 11 May
+[here](http://www.mixedmigration.org/resource-type/covid-19/) on 12 May
 2020. Data analyst: Jean-Luc Jucker, PhD
