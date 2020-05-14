@@ -12,9 +12,6 @@ na <- read_excel("data/03_MMC_NA_Covid19_NA_DataforGVA_20200407_20200507.xlsx", 
 #wa
 wa <- read_excel("data/03_MMC_WA_Covid19_ValidatedData_20200420_20200510.xlsx", na = "", sheet = 3)
 
-
-?read_excel
-
 #inspect####
 dim(asia) #127obs 398vars
 dim(lac) #383obs 565vars
@@ -122,7 +119,6 @@ na2 <- na %>%
 dim(na2) #957 195
 View(na2)
 
-
 #wa####
 wa2 <- wa %>% 
   filter(start != "start") %>% 
@@ -154,11 +150,12 @@ wa2 <- wa %>%
 dim(wa2) #645 194
 View(wa2)
 
-
 #CHECK COLNAMES####
 variables_names  <- data.frame(asia = colnames(asia2), lac = colnames(lac2), na= colnames(na2), wa = colnames(wa2))
 View(variables_names)
 write.csv(variables_names, "data_outputs/03_variables_names_20200512.csv")
+
+identical(names(asia2), names(lac2))
 
 
 #BIND####
@@ -173,6 +170,18 @@ data[numerics] <- lapply(data[numerics], as.numeric)
 factors  <- c(1:3, 5:193)
 data[factors] <- lapply(data[factors], as.factor)
 str(data)
+
+#HARMONIZE 'NONE' ANSWER OPTIONS####
+levels(data$`c6/None`) #inconsistent
+levels(data$`c10/None`)#inconsistent
+#c6
+data$`c6/None` <- as.character(data$`c6/None`)
+data$`c6/None`[data$`c6/None`=="I did not receive any information"] <- "None"
+data$`c6/None` <- as.factor(data$`c6/None`)
+#c10
+data$`c10/None` <- as.character(data$`c10/None`)
+data$`c10/None`[data$`c10/None`=="I did not receive any information"] <- "None"
+data$`c10/None` <- as.factor(data$`c10/None`)
 
 #SAVE####
 #rda
