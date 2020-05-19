@@ -831,7 +831,7 @@ fig6 <- fig6_data %>%
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
 fig6
 
-
+#Export figures####
 # NOT RUN {
 require(devEMF)
 # }
@@ -847,6 +847,75 @@ dev.off() #turn off device and finalize file
 table_demographics <- data.frame(Region=c("Asia", "", "Latin America", "", "North Africa", "", "West Africa", "", "", "Overall"), Country=c("India", "Indonesia", "Colombia", "Peru", "Libya", "Tunisia", "Burkina Faso", "Mali", "Niger", ""), n=c(58, 68, 292, 90, 442, 515, 204, 234, 207, 2110), `Percent women` = c(43, 40, 72, 54, 29, 35, 41, 18, 28, 38), `Mean age`=c(34, 28, 34, 33, 30, 28, 28, 27, 31, 30)) %>% print()
 ?kable
 
+#TREND ANALYSIS####
+load("rda/01_cleaned_data_20200421.rda")
+load("rda/02_cleaned_data_20200430.rda")
+load("rda/03_cleaned_data_20200512.rda") 
+up1 <- data
+up2  <- data
+up3 <- data 
+
+up1 <- up1 %>% 
+  filter(Q55.Are.you.in.need.of.extra.help.since.the.coronavirus.outbreak.began. == "Yes") %>% #n = 598
+  group_by(Region) %>% 
+  mutate(N_region_part = length(Region)) %>% 
+  select(182, 184, 155:166) %>% 
+  pivot_longer(cols = 3:14, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  filter(Answer != "") %>% 
+  group_by(Region, N_region_part) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region_part*100, digits = 1)) %>% 
+  mutate(Update = "1")
+View(up1)
+str(up1)
+
+up2 <- up2 %>% 
+  filter(c26 == "Yes") %>% #n = 1,014
+  group_by(Region) %>% 
+  mutate(N_region_part = length(Region)) %>% 
+  select(189, 192, 154:164, 166) %>% 
+  pivot_longer(cols = 3:14, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region_part) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region_part*100, digits = 1)) %>% 
+  mutate(Update = "2")
+View(up2)
+str(up2)
+
+up3 <- up3 %>% 
+  filter(c26 == "Yes") %>% #n = 1,827
+  group_by(Region) %>% 
+  mutate(N_region_part = length(Region)) %>% 
+  select(193, 196, 157:167, 169) %>% 
+  pivot_longer(cols = 3:14, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region_part) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region_part*100, digits = 1)) %>% 
+  mutate(Update = "3")
+View(up3)
+str(up3)
+
+trend <- rbind(up1, up2, up3)
+str(trend)
+numerics <- c(2, 4, 5)
+trend[numerics] <- lapply(trend[numerics], as.numeric)
+factors  <- c(1, 3, 6)
+trend[factors] <- lapply(trend[factors], as.factor)
+str(data)
+View(trend)
+
+#plot
+trend %>% 
+  filter(Region != "Asia") %>% 
+  ggplot(aes(x=Update, y=Percent, color=Region))+ 
+  geom_line(aes(group=Region))+
+  facet_wrap(~Answer)
+
+  
+str(trend)
 
 
 #SHINY APP####
@@ -872,13 +941,10 @@ server <- function(input, output) {
       theme(legend.position = c(0.70, 0.95), legend.direction = "horizontal", legend.title = element_blank())+
       scale_fill_discrete(guide = guide_legend(reverse = TRUE))+
       coord_flip()
-    
-    
-  })
+      })
 }
 
 shinyApp(ui = ui, server = server)
-
 
 #SHINY APP 2####
 library(shiny)
@@ -906,72 +972,10 @@ server <- function(input, output) {
       theme(legend.position = c(0.70, 0.95), legend.direction = "horizontal", legend.title = element_blank())+
       scale_fill_discrete(guide = guide_legend(reverse = TRUE))+
       coord_flip()
-    
-    
-  })
+      })
 }
 
 shinyApp(ui = ui, server = server)
-
-
-data %>%
-  group_by(Region, c31) %>% 
-  tally() %>% 
-  mutate(Percent=round(n/sum(n)*100, digits = 1))
-
-
-
-
-
-
-
-
-
-fig1_data <- data %>%
-  group_by(Region, c31) %>% 
-  tally() %>% 
-  mutate(Percent=round(n/sum(n)*100, digits = 1)) %>% print()
-fig1  <- fig1_data %>% 
-  mutate(c31=fct_relevel(c31, "Refused", "Don´t know", "No", "Yes")) %>% 
-  ungroup() %>% 
-  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America")) %>% 
-  ggplot(aes(fill=c31, y=Percent))+
-  geom_col(aes(x=Region, y=Percent), width = 0.47)+
-  xlab("")+
-  theme_bw()+
-  coord_flip()+
-  scale_y_continuous(breaks = seq(0, 100, by = 10))+
-  theme(legend.title = element_blank())+
-  theme(legend.position = c(0.70, 0.95), legend.direction = "horizontal", legend.title = element_blank())+
-  scale_fill_discrete(guide = guide_legend(reverse = TRUE))
-fig1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #app template####
 ui <- fluidPage(
@@ -995,7 +999,7 @@ shinyApp(ui = ui, server = server)
 
 
 
-
+View(data)
 
 
 
