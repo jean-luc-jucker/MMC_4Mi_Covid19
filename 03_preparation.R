@@ -1,7 +1,7 @@
 library(tidyverse)
 library(readxl)
 getwd()
-
+ 
 #GET DATA####
 #asia
 asia <- read_xlsx("data/03_MMC_Asia_Covid19_20200409_01_WorkingFile_20200511.xls", na = "", sheet = 3) #files is xlsx despite extension
