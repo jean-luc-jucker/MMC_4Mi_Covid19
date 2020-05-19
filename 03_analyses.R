@@ -616,7 +616,7 @@ data %>%
   print(n=50)
 data %>% 
   select(193, 194, 181:191) %>%
-  pivot_longer(cols = 3:13, names_to = "Options", values_to = "Answer") %>% 
+  pivot_longer(cols = 3:13, names_to = "Options", values_to = "Answer") %>%
   filter(!is.na(Answer)) %>% 
   group_by(Region, N_region) %>% 
   count(Answer) %>% 
@@ -656,36 +656,46 @@ fig1_data <- data %>%
 fig1  <- fig1_data %>% 
   mutate(c31=fct_relevel(c31, "Refused", "Don´t know", "No", "Yes")) %>% 
   ungroup() %>% 
-  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America")) %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Asia", "Latin America")) %>% 
   ggplot(aes(fill=c31, y=Percent))+
-  geom_col(aes(x=Region, y=Percent), width = 0.47)+
+  geom_col(aes(x=Region, y=Percent), width = 0.42)+
   xlab("")+
   theme_bw()+
+  labs(caption = "Number of respondents
+  Asia: 126
+  Latin America: 382
+  North Africa: 957
+       West Africa: 645")+
   coord_flip()+
   scale_y_continuous(breaks = seq(0, 100, by = 10))+
   theme(legend.title = element_blank())+
-  theme(legend.position = c(0.70, 0.95), legend.direction = "horizontal", legend.title = element_blank())+
+  theme(legend.position = c(0.65, 0.96), legend.direction = "horizontal", legend.title = element_blank())+
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
 fig1
 
-#Figure 2, Who did you receive information from?####
+#Figure 2, Who do you think is a trustworthy source of information?####
 fig2_data <- data %>% 
-  select(193, 194, 55:70) %>%
-  pivot_longer(cols = 3:18, names_to = "Options", values_to = "Answer") %>% 
+  select(193, 194, 96:112) %>% #note this includes 24 nones
+  pivot_longer(cols = 3:19, names_to = "Options", values_to = "Answer") %>% 
   filter(!is.na(Answer)) %>% 
   group_by(Region, N_region) %>% 
   count(Answer) %>% 
   mutate(Percent = round(n/N_region*100, digits = 1)) %>% 
-  print(n=50)
+  print(n=65)
 fig2  <- fig2_data %>%
   ungroup() %>% 
-  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America")) %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "Asia")) %>% 
   mutate(Answer = reorder(Answer, Percent)) %>% 
   ggplot(aes(fill=Region))+
   geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
   ylab("Percent")+
   xlab("")+
   theme_bw()+
+  labs(caption = "Number of respondents
+  Asia: 126
+  Latin America: 382
+  North Africa: 951
+       West Africa: 645")+
   scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
   coord_flip()+
   theme(legend.title = element_blank())+
@@ -695,8 +705,8 @@ fig2
 
 #Figure 3, Barriers to healthcare####
 fig3_data  <- data %>% 
-  select(193, 194, 113:125) %>%
-  pivot_longer(cols = 3:15, names_to = "Options", values_to = "Answer") %>% 
+  select(193, 194, 115:128) %>%
+  pivot_longer(cols = 3:16, names_to = "Options", values_to = "Answer") %>% 
   filter(!is.na(Answer)) %>% 
   group_by(Region, N_region) %>% 
   count(Answer) %>% 
@@ -721,6 +731,11 @@ fig3  <- fig3_data %>%
   ylab("Percent")+
   xlab("")+
   theme_bw()+
+  labs(caption = "Number of respondents
+  Asia: 126
+  Latin America: 382
+  North Africa: 951
+       West Africa: 645")+
   scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
   coord_flip()+
   theme(legend.title = element_blank())+
@@ -729,11 +744,11 @@ fig3  <- fig3_data %>%
 fig3
   
 #Figure 4, Assistance####
-fig4_received <- data %>% #N=249
+fig4_received <- data %>% 
   filter(c23 == "Yes") %>%#discard those that didn't receive help
   group_by(Region) %>% 
   mutate(N_region_part = length(Region)) %>% #get n by region
-  select(189, 192, 128:140) %>%
+  select(193, 196, 131:143) %>%
   pivot_longer(cols = 3:15, names_to = "Options", values_to = "Answer") %>% 
   filter(!is.na(Answer)) %>% 
   group_by(Region, N_region_part) %>% 
@@ -741,17 +756,17 @@ fig4_received <- data %>% #N=249
   mutate(Percent = round(n/N_region_part*100, digits = 1)) %>% 
   print(n=50)
 
-fig4_needed  <- data %>% #N=1,014
-  filter(c26 == "Yes") %>%#discard those that don't need extra help
+fig4_needed  <- data %>% 
+  filter(c26 == "Yes") %>% #discard those that don't need extra help
   group_by(Region) %>% 
   mutate(N_region_part = length(Region)) %>% #get n by region
-  select(189, 192, 154:166) %>%
+  select(193, 196, 157:169) %>%
   pivot_longer(cols = 3:15, names_to = "Options", values_to = "Answer") %>% 
   filter(!is.na(Answer)) %>% 
   group_by(Region, N_region_part) %>% 
   count(Answer) %>% 
   mutate(Percent = round(n/N_region_part*100, digits = 1)) %>% 
-  print(n=50)
+  print(n=52)
 
 fig4  <- fig4_received %>%
   ungroup() %>% 
@@ -761,9 +776,10 @@ fig4  <- fig4_received %>%
   xlab("")+
   theme_bw()+
   labs(caption = "Number of respondents
-  Latin America: received = 99, needed = 277
-  North Africa: received = 78, needed = 441
-       West Africa: received = 72, needed = 296")+
+  Asia: received = 32, needed = 110
+  Latin America: received = 120, needed = 338
+  North Africa: received = 158, needed = 809
+       West Africa: received = 123, needed = 570")+
   scale_y_continuous(breaks = seq(0, 100, by = 10)) + 
   theme(legend.title = element_blank())+
   theme(legend.position = "none")+
@@ -777,8 +793,8 @@ fig4
 
 #Figure 5, Impact on life####
 fig5_data  <- data %>% 
-  select(193, 194, 168:174) %>%
-  pivot_longer(cols = 3:9, names_to = "Options", values_to = "Answer") %>% 
+  select(193, 194, 171:178) %>% #includes 60 none
+  pivot_longer(cols = 3:10, names_to = "Options", values_to = "Answer") %>% 
   filter(!is.na(Answer)) %>% 
   group_by(Region, N_region) %>% 
   count(Answer) %>% 
@@ -787,49 +803,63 @@ fig5_data  <- data %>%
 fig5 <- fig5_data %>% 
   ungroup() %>% 
   mutate(Answer = recode(Answer, 'Other (specify)' = "Other")) %>% 
-  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America")) %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "Asia")) %>% 
   mutate(Answer = reorder(Answer, Percent)) %>% 
   ggplot(aes(fill=Region))+
   geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
   ylab("Percent")+
   xlab("")+
   theme_bw()+
+  labs(caption = "Number of respondents
+  Asia: 126
+  Latin America: 382
+  North Africa: 951
+       West Africa: 645")+
   scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
   coord_flip()+
   theme(legend.title = element_blank())+
   theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
 fig5
-  
-#Figure 6, Impact on journey####  
-fig6_data <- data %>% 
-  select(193, 194, 177:187) %>%
-  pivot_longer(cols = 3:13, names_to = "Options", values_to = "Answer") %>% 
+
+
+#Figure 6, Impact of loss of income#### 
+#see file 03_analyses_c22
+
+#Figure 7, Impact on journey####  
+fig7_data <- data %>% 
+  select(193, 194, 181:191) %>%
+  pivot_longer(cols = 3:13, names_to = "Options", values_to = "Answer") %>%
   filter(!is.na(Answer)) %>% 
   group_by(Region, N_region) %>% 
   count(Answer) %>% 
   mutate(Percent = round(n/N_region*100, digits = 1)) %>% 
   print(n=50)
-fig6 <- fig6_data %>% 
+fig7 <- fig7_data %>% 
   ungroup() %>% 
   mutate(Answer = recode(Answer, 'Other (specify)' = "Other", 'I\'ve been delayed because I was sick, or because I had to stop and take care of people who got sick' = "Delayed because I or other people were sick",
                          'I feel too afraid to move (to continue my journey or return)' = "I feel to afraid to move",
                          'Increased difficulty moving around inside countries'="Increased difficulty moving around",
                          'I was going to be resettled, but this is now delayed'="About to be resettled, but now delayed",
                          'Disembarked / deported back to previous country'="Deported back to previous country")) %>% 
-  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America")) %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "Asia")) %>% 
   mutate(Answer = reorder(Answer, Percent)) %>% 
   ggplot(aes(fill=Region))+
   geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
   ylab("Percent")+
   xlab("")+
   theme_bw()+
+  labs(caption = "Number of respondents
+  Asia: 126
+  Latin America: 382
+  North Africa: 951
+       West Africa: 645")+
   scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
   coord_flip()+
   theme(legend.title = element_blank())+
   theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
-fig6
+fig7
 
 #Export figures####
 # NOT RUN {
@@ -837,9 +867,9 @@ require(devEMF)
 # }
 # NOT RUN {
 # open file "bar.emf" for graphics output
-emf("fig4.emf")
+emf("fig7.emf")
 # produce the desired graph(s)
-plot(fig4)
+plot(fig7)
 dev.off() #turn off device and finalize file
 # }
 
