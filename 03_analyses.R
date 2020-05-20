@@ -998,37 +998,26 @@ up3bis <- up3 %>%
   mutate(Update = "3")
 View(up3bis)
 
+trend2 <- rbind(up1bis, up2bis, up3bis)
+str(trend2)
+numerics <- c(2, 3)
+trend2[numerics] <- lapply(trend2[numerics], as.numeric)
+factors  <- c(1, 4)
+trend2[factors] <- lapply(trend2[factors], as.factor)
+str(trend2)
 
-trend <- rbind(up1, up2, up3)
-str(trend)
-numerics <- c(2, 4, 5)
-trend[numerics] <- lapply(trend[numerics], as.numeric)
-factors  <- c(1, 3, 6)
-trend[factors] <- lapply(trend[factors], as.factor)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#plot
+trend2 %>% 
+  ungroup() %>% 
+  filter(Answer != "Refused") %>% 
+  mutate(Answer = recode(Answer, "Access to health services"="Health services", "Distribution of sanitary items (sanitizer/ mask/ gloves/ etc)"="Sanitizer, masks, gloves", "Cash to pay for health services"="Cash for health services", "Documentation to access health services"="Documentation", 'Information about the virus: symptoms/ what to do if I have symptoms/ how to protect myself'="Information", "Other basic needs: food, water, shelter"="Food, water, shelter", "Access to work and livelihoods"="Access to work", "Psychological assistance"="Psychological support", "Other (specify)"="Other")) %>% 
+  ggplot(aes(x=Update, y=Percent, color=Answer))+ 
+  geom_line(aes(group=Answer))+
+  theme_bw()+
+  labs(caption = "Number of respondents
+  Update 1: 598
+  Update 2: 1,014
+  Update 3: 1,827")
 
 
 
