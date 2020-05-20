@@ -737,7 +737,8 @@ fig3  <- fig3_data %>%
   North Africa: 951
        West Africa: 645")+
   scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
-  coord_flip()+
+  scale_x_discrete(limits=c("Refused", "None", "Other", "Don't know", "General insecurity", "There are no health services here", "Services are overwhelmed", "The advice is unclear here", "Afraid of being reported", "I don't speak the language", "Discrimination against foreigners", "I don't have the right/documentation", "I don't know where to go", "I don't have the money"))+
+   coord_flip()+
   theme(legend.title = element_blank())+
   theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
@@ -854,12 +855,17 @@ fig7 <- fig7_data %>%
   Latin America: 382
   North Africa: 951
        West Africa: 645")+
-  scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
+  scale_y_continuous(breaks = seq(0, 100, by = 5)) +
+  scale_x_discrete(limits=c("Refused", "None", "Other", "Delayed because I or other people were sick", "Deported back to previous country", "About to be resettled, but now delayed", "Reduced access to smugglers", "Increased risk of detention and deportation", "I feel to afraid to move", "Increased difficulty moving around", "Increased difficulty crossing borders"))+
   coord_flip()+
   theme(legend.title = element_blank())+
-  theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
+  theme(legend.position = c(0.80, 0.375), legend.direction = "vertical", legend.title = element_blank())+
   scale_fill_discrete(guide = guide_legend(reverse = TRUE))
 fig7
+
+
+
+levels(fig7_data$Answer)
 
 #Export figures####
 # NOT RUN {
@@ -867,9 +873,9 @@ require(devEMF)
 # }
 # NOT RUN {
 # open file "bar.emf" for graphics output
-emf("fig7.emf")
+emf("fig3_bis.emf")
 # produce the desired graph(s)
-plot(fig7)
+plot(fig3)
 dev.off() #turn off device and finalize file
 # }
 
