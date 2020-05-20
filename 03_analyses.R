@@ -937,15 +937,99 @@ trend[factors] <- lapply(trend[factors], as.factor)
 str(data)
 View(trend)
 
-#plot
+#plot--by answer
 trend %>% 
   filter(Region != "Asia") %>% 
+  filter(Answer != "Refused") %>% 
+  mutate(Answer = recode(Answer, "Access to health services"="Health services", "Distribution of sanitary items (sanitizer/ mask/ gloves/ etc)"="Sanitizer, masks, gloves", "Cash to pay for health services"="Cash for health services", "Documentation to access health services"="Documentation", 'Information about the virus: symptoms/ what to do if I have symptoms/ how to protect myself'="Information", "Other basic needs: food, water, shelter"="Food, water, shelter", "Access to work and livelihoods"="Access to work", "Psychological assistance"="Psychological support", "Other (specify)"="Other")) %>%
+  mutate(Answer = reorder(Answer, -Percent)) %>%
   ggplot(aes(x=Update, y=Percent, color=Region))+ 
   geom_line(aes(group=Region))+
   facet_wrap(~Answer)
 
+#plot--by region
+trend %>% 
+  filter(Region != "Asia") %>% 
+  filter(Answer != "Refused") %>% 
+  mutate(Answer = recode(Answer, "Access to health services"="Health services", "Distribution of sanitary items (sanitizer/ mask/ gloves/ etc)"="Sanitizer, masks, gloves", "Cash to pay for health services"="Cash for health services", "Documentation to access health services"="Documentation", 'Information about the virus: symptoms/ what to do if I have symptoms/ how to protect myself'="Information", "Other basic needs: food, water, shelter"="Food, water, shelter", "Access to work and livelihoods"="Access to work", "Psychological assistance"="Psychological support", "Other (specify)"="Other")) %>% 
+  ggplot(aes(x=Update, y=Percent, color=Answer))+ 
+  geom_line(aes(group=Answer))+
+  facet_grid(rows = vars(Region))
   
+#plot--overall (without region)
+#prepare data
+up1bis <- up1 %>% 
+  filter(Q55.Are.you.in.need.of.extra.help.since.the.coronavirus.outbreak.began. == "Yes") %>% #n = 598
+  group_by(Region) %>% 
+  mutate(N_region_part = length(Region)) %>% 
+  select(182, 184, 155:166) %>% 
+  pivot_longer(cols = 3:14, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  filter(Answer != "") %>% 
+  group_by(Answer) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/598*100, digits = 1)) %>% 
+  mutate(Update = "1")
+View(up1bis)
+
+up2bis <- up2 %>% 
+  filter(c26 == "Yes") %>% #n = 1,014
+  group_by(Region) %>% 
+  mutate(N_region_part = length(Region)) %>% 
+  select(189, 192, 154:164, 166) %>% 
+  pivot_longer(cols = 3:14, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Answer) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/1014*100, digits = 1)) %>% 
+  mutate(Update = "2")
+View(up2bis)
+
+up3bis <- up3 %>% 
+  filter(c26 == "Yes") %>% #n = 1,827
+  group_by(Region) %>% 
+  mutate(N_region_part = length(Region)) %>% 
+  select(193, 196, 157:167, 169) %>% 
+  pivot_longer(cols = 3:14, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Answer) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/1827*100, digits = 1)) %>% 
+  mutate(Update = "3")
+View(up3bis)
+
+
+trend <- rbind(up1, up2, up3)
 str(trend)
+numerics <- c(2, 4, 5)
+trend[numerics] <- lapply(trend[numerics], as.numeric)
+factors  <- c(1, 3, 6)
+trend[factors] <- lapply(trend[factors], as.factor)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #SHINY APP####
