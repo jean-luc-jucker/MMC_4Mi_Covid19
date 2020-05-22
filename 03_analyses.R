@@ -654,9 +654,9 @@ fig1_data <- data %>%
   tally() %>% 
   mutate(Percent=round(n/sum(n)*100, digits = 1)) %>% print()
 fig1  <- fig1_data %>% 
-  mutate(c31=fct_relevel(c31, "Refused", "DonÂ´t know", "No", "Yes")) %>% 
+  mutate(c31=fct_relevel(c31, "Refused", "Don´t know", "No", "Yes")) %>% 
   ungroup() %>% 
-  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Asia", "Latin America")) %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "Asia")) %>% 
   ggplot(aes(fill=c31, y=Percent))+
   geom_col(aes(x=Region, y=Percent), width = 0.42)+
   xlab("")+
@@ -784,13 +784,15 @@ fig4  <- fig4_received %>%
   scale_y_continuous(breaks = seq(0, 100, by = 10)) + 
   theme(legend.title = element_blank())+
   theme(legend.position = "none")+
-  scale_fill_discrete(guide = guide_legend(reverse = TRUE))+
   theme(axis.text.x = element_text(angle = 40, hjust = 1))+
   facet_grid(rows = vars(Region))+
   geom_point(data = fig4_needed, aes(x=Answer, y=Percent))+
   geom_line(data = fig4_needed, aes(x=Answer, y=Percent, group=Region))+
-  scale_x_discrete(labels=c("Access to health services"="Health services", "Distribution of sanitary items (sanitizer/ mask/ gloves/ etc)"="Sanitizer, masks, gloves", "Cash to pay for health services"="Cash for health services", "Documentation to access health services"="Documentation", "Information about the virus: symptoms/ what to do if I have symptoms/ how to protect myself"="Information", "Other basic needs: food, water, shelter"="Food, water, shelter", "Access to work and livelihoods"="Access to work", "Psychological assistance"="Psychological support", "Other (specify)"="Other"))
+  scale_x_discrete(labels=c("Access to health services"="Health services", "Distribution of sanitary items (sanitizer/ mask/ gloves/ etc)"="Sanitizer, masks, gloves", "Cash to pay for health services"="Cash for health services", "Documentation to access health services"="Documentation", "Information about the virus: symptoms/ what to do if I have symptoms/ how to protect myself"="Information", "Other basic needs: food, water, shelter"="Food, water, shelter", "Access to work and livelihoods"="Access to work", "Psychological assistance"="Psychological support", "Other (specify)"="Other"))+
+  scale_fill_manual(values=c("#C77CFF", "#00BFC4", "#7CAE00","#F8766D"))
 fig4
+
+
 
 #Figure 5, Impact on life####
 fig5_data  <- data %>% 
@@ -873,9 +875,9 @@ require(devEMF)
 # }
 # NOT RUN {
 # open file "bar.emf" for graphics output
-emf("fig3_bis.emf")
+emf("fig4_bis.emf")
 # produce the desired graph(s)
-plot(fig3)
+plot(fig4)
 dev.off() #turn off device and finalize file
 # }
 
