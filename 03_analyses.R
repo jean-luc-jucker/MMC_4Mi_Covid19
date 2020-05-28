@@ -654,7 +654,7 @@ fig1_data <- data %>%
   tally() %>% 
   mutate(Percent=round(n/sum(n)*100, digits = 1)) %>% print()
 fig1  <- fig1_data %>% 
-  mutate(c31=fct_relevel(c31, "Refused", "Don´t know", "No", "Yes")) %>% 
+  mutate(c31=fct_relevel(c31, "Refused", "DonÂ´t know", "No", "Yes")) %>% 
   ungroup() %>% 
   mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "Asia")) %>% 
   ggplot(aes(fill=c31, y=Percent))+
@@ -747,7 +747,7 @@ fig3
 #Figure 4, Assistance####
 fig4_received <- data %>% 
   filter(c23 == "Yes") %>%#discard those that didn't receive help
-  group_by(Region) %>% 
+  group_by(Region, .drop = FALSE) %>% 
   mutate(N_region_part = length(Region)) %>% #get n by region
   select(193, 196, 131:143) %>%
   pivot_longer(cols = 3:15, names_to = "Options", values_to = "Answer") %>% 
@@ -759,7 +759,7 @@ fig4_received <- data %>%
 
 fig4_needed  <- data %>% 
   filter(c26 == "Yes") %>% #discard those that don't need extra help
-  group_by(Region) %>% 
+  group_by(Region, .drop = FALSE) %>% 
   mutate(N_region_part = length(Region)) %>% #get n by region
   select(193, 196, 157:169) %>%
   pivot_longer(cols = 3:15, names_to = "Options", values_to = "Answer") %>% 
