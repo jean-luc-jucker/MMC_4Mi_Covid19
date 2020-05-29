@@ -45,12 +45,12 @@ asia2 <- asia %>%
            c21, c22, `c22/I am unable to afford basic goods`, `c22/Loss of housing`, `c22/Increased worry and anxiety`, `c22/I am unable to pay remittances`, `c22/I am unable to continue my journey`, `c22/Other (specify)`, `c22/Refused`, `c22/None`, #lost income
            c19,	`c19/None`,	`c19/Increased difficulty crossing borders`,	`c19/Increased risk of detention and deportation`,	`c19/Reduced access to smugglers`,	`c19/Increased difficulty moving around inside countries`,	`c19/I was going to be resettled, but this is now delayed`,	`c19/Disembarked / deported back to previous country`,	`c19/I've been delayed because I was sick, or because I had to stop and take care of people who got sick`,	`c19/I feel too afraid to move (to continue my journey or return)`,	`c19/Other (specify)`,	`c19/Refused`, #IMPACT ON JOURNEY #type
            c29, #changed plans
-           c34, c35 #qualitative data
+           c34, c35, Q29 #qualitative data, nationality
   )) %>%
   mutate(Region = as.factor("Asia"), N_region = length(Region)) %>% 
   group_by(Q13_1c) %>%  mutate(N_country = length(Q13_1c)) %>% ungroup() %>% 
   rename(`c6/None`=`c6/I did not receive any information`, `c10/None`=`c10/I did not receive any information`)
-dim(asia2) #238 206
+dim(asia2) #238 207
 View(asia2)
 
 #eay####
@@ -77,12 +77,12 @@ eay2 <- eay %>%
            c21, c22, `c22/I am unable to afford basic goods`, `c22/Loss of housing`, `c22/Increased worry and anxiety`, `c22/I am unable to pay remittances`, `c22/I am unable to continue my journey`, `c22/Other (specify)`, `c22/Refused`, `c22/None`, #lost income
            c19,	`c19/None`,	`c19/Increased difficulty crossing borders`,	`c19/Increased risk of detention and deportation`,	`c19/Reduced access to smugglers`,	`c19/Increased difficulty moving around inside countries`,	`c19/I was going to be resettled, but this is now delayed`,	`c19/Disembarked / deported back to previous country`,	`c19/I've been delayed because I was sick, or because I had to stop and take care of people who got sick`,	`c19/I feel too afraid to move (to continue my journey or return)`,	`c19/Other (specify)`,	`c19/Refused`, #IMPACT ON JOURNEY #type
            c29, #changed plans
-          c34, c35 #qualitative data
+          c34, c35, Q29 #qualitative data, nationality
   )) %>%
   mutate(Region = as.factor("East Africa"), N_region = length(Region)) %>% 
   group_by(Q13_1c) %>%  mutate(N_country = length(Q13_1c)) %>% ungroup() %>% 
   rename(`c6/None`=`c6/I did not receive any information`, `c10/None`=`c10/I did not receive any information`)
-dim(eay2) #100 206
+dim(eay2) #100 207
 View(eay2)
 
 
@@ -110,11 +110,11 @@ lac2 <- lac %>%
            c21, c22, `c22/I am unable to afford basic goods`, `c22/Loss of housing`, `c22/Increased worry and anxiety`, `c22/I am unable to pay remittances`, `c22/I am unable to continue my journey`, `c22/Other (specify)`, `c22/Refused`, `c22/None`, #lost income
            c19,	`c19/None`,	`c19/Increased difficulty crossing borders`,	`c19/Increased risk of detention and deportation`,	`c19/Reduced access to smugglers`,	`c19/Increased difficulty moving around inside countries`,	`c19/I was going to be resettled, but this is now delayed`,	`c19/Disembarked / deported back to previous country`,	`c19/I've been delayed because I was sick, or because I had to stop and take care of people who got sick`,	`c19/I feel too afraid to move (to continue my journey or return)`,	`c19/Other (specify)`,	`c19/Refused`, #IMPACT ON JOURNEY #type
            c29, #changed plans
-          c34, c35 #qualitative data
+          c34, c35, Q29 #qualitative data, nationality
 )) %>%
   mutate(Region = as.factor("Latin America"), N_region = length(Region)) %>% 
   group_by(Q13_1c) %>%  mutate(N_country = length(Q13_1c)) %>% ungroup()
-dim(lac2) #459 206
+dim(lac2) #459 207
 View(lac2)
 
 #na####
@@ -141,7 +141,7 @@ na2 <- na %>%
            c21, c22, `c22/I am unable to afford basic goods`, `c22/Loss of housing`, `c22/Increased worry and anxiety`, `c22/I am unable to pay remittances`, `c22/I am unable to continue my journey`, `c22/Other (specify)`, `c22/Refused`, `c22/None`, #lost income
            c19,	`c19/None`,	`c19/Increased difficulty crossing borders`,	`c19/Increased risk of detention and deportation`,	`c19/Reduced access to smugglers`,	`c19/Increased difficulty moving around inside countries`,	`c19/I was going to be resettled, but this is now delayed`,	`c19/Disembarked / deported back to previous country`,	`c19/I've been delayed because I was sick, or because I had to stop and take care of people who got sick`,	`c19/I feel too afraid to move (to continue my journey or return)`,	`c19/Other (specify)`,	`c19/Refused`, #IMPACT ON JOURNEY #type
            c29, #changed plans
-           c34, c35 #qualitative data
+           c34, c35, Q29 #qualitative data, nationality
   )) %>%
   mutate(Region = as.factor("North Africa"), N_region = length(Region)) %>% 
   group_by(Q13_1c) %>%  mutate(N_country = length(Q13_1c)) %>% ungroup() %>% 
@@ -149,7 +149,7 @@ na2 <- na %>%
   add_column("c10/None"=NA, .after = 111) %>% 
   add_column("c18/None"=NA, .after = 127) %>% 
   add_column("c20/None"=NA, .after = 177)
-dim(na2) #1500 206
+dim(na2) #1500 207
 View(na2)
 
 #wa####
@@ -176,29 +176,30 @@ wa2 <- wa %>%
            c21, c22,  `c22/I am unable to afford basic goods`, `c22/Loss of housing`, `c22/Increased worry and anxiety`, `c22/I am unable to pay remittances`, `c22/I am unable to continue my journey`, `c22/Other (specify)`, `c22/Refused`, `c22/None`, #lost income
            c19,	`c19/None`,	`c19/Increased difficulty crossing borders`,	`c19/Increased risk of detention and deportation`,	`c19/Reduced access to smugglers`,	`c19/Increased difficulty moving around inside countries`,	`c19/I was going to be resettled, but this is now delayed`,	`c19/Disembarked / deported back to previous country`,	`c19/I've been delayed because I was sick, or because I had to stop and take care of people who got sick`,	`c19/I feel too afraid to move (to continue my journey or return)`,	`c19/Other (specify)`,	`c19/Refused`, #IMPACT ON JOURNEY #type
            c29, #changed plans
-           c34, c35 #qualitative data
+           c34, c35, Q29 #qualitative data, nationality
   )) %>%
   mutate(Region = as.factor("West Africa"), N_region = length(Region)) %>% 
   group_by(Q13_1c) %>%  mutate(N_country = length(Q13_1c)) %>% ungroup()%>% 
   rename(`c6/None`=`c6/I did not receive any information`, `c10/None`=`c10/I did not receive any information`)
-dim(wa2) #993 206
+dim(wa2) #993 207
 View(wa2)
 
 #CHECK COLNAMES BEFORE BINDING#############################
 variables_names  <- as.matrix(data.frame(asia = colnames(asia2), eay = colnames(eay2), lac = colnames(lac2), na = colnames(na2), wa = colnames(wa2)))
+View(variables_names)
 all(variables_names[,1]==variables_names)
 
 #BIND######################################################
 data <- rbind(asia2, eay2, lac2, na2, wa2)
-dim(data) #3290 obs, 206 vars
+dim(data) #3290 obs, 207#################### vars
 View(data)
 
 #DEFINE VARIABLE TYPES#####################################
 str(data)
 View(colnames(data))
-numerics <- c(4, 205:206)
+numerics <- c(4, 206:207)
 data[numerics] <- lapply(data[numerics], as.numeric)
-factors  <- c(1:3, 5:204)
+factors  <- c(1:3, 5:205)
 data[factors] <- lapply(data[factors], as.factor)
 str(data)
 
