@@ -87,6 +87,9 @@ data %>%
   mutate(Percent=round(n/sum(n)*100, digits = 1)) %>% 
   print(n=36)
 
+
+
+
 #c3 I am worried about catching coronavirus (na=8)####
 levels(data$c3)
 data$c3 <- factor(data$c3, levels = c("Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree", "Refused"))
