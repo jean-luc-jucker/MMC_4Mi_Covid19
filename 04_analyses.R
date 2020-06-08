@@ -3,7 +3,7 @@ library(scales)
 getwd()
 load("rda/04_cleaned_data_20200528.rda")
 dim(data) #3,290 obs, 207 vars
-
+ 
 #NUMBER OF INTERVIEWS####
 data %>% group_by(Region) %>%
   tally()
