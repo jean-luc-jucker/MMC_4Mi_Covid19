@@ -919,7 +919,7 @@ data %>%
 data %>%
   group_by(Period, Region, N_period_region, c29) %>% 
   tally() %>% 
-  mutate(Percent=round(n/N_period_region*100, digits = 1)) %>% print(n=58)
+  mutate(Percent=round(n/N_period_region*100, digits = 1)) %>% print(n=98)
 data %>%
   group_by(Period, Region, N_period_region, c29) %>% 
   tally() %>% 
