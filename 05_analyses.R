@@ -941,6 +941,58 @@ data %>%
 
 
 
+#CHOSEN GRAPHS#############################################
+
+#c3 I am worried about catching coronavirus (na=9)####
+levels(data$c3)
+data$c3 <- factor(data$c3, levels = c("Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree", "Refused"))
+
+#overall
+data %>% 
+  mutate(c3 = recode(c3, "Strongly agree" = "Agree")) %>% 
+  group_by(Period, c3) %>% 
+  tally() %>% 
+  mutate(Percent=round(n/sum(n)*100, digits = 1)) %>% 
+  filter(c3=="Agree")
+
+#region
+c3 <- data %>% 
+  mutate(c3 = recode(c3, "Strongly agree" = "Agree")) %>% 
+  group_by(Period, Region, N_period_region, c3) %>% 
+  tally() %>% 
+  mutate(Percent=round(n/N_period_region*100, digits = 1)) %>%
+  filter(c3=="Agree") %>% 
+  ungroup() %>% 
+  add_row(Period=1, Region="Overall", N_period_region=2048, c3="Agree", n=1820, Percent=88.9) %>% 
+  add_row(Period=2, Region="Overall", N_period_region=1184, c3="Agree", n=1051, Percent=88.8) %>%
+  add_row(Period=3, Region="Overall", N_period_region=892, c3="Agree", n=785, Percent=88) 
+c3
+
+c3$Region <- factor(c3$Region,levels = c("Asia", "East Africa", "Latin America", "North Africa", "West Africa", "Overall"))
+
+fig1 <- c3 %>% 
+  ggplot(aes(x=as.factor(Period), y=Percent, color=Region)) +
+  geom_line(aes(group=Region, linetype=Region), size=2.5)+
+  scale_y_continuous(limits = c(60, 100), breaks = seq(0, 100, by = 10))+
+  scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "dashed"))+
+  scale_color_manual(values=c("#CC79A7", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#000000"))
+fig1
+
+
+
+#Export figures####
+# NOT RUN {
+require(devEMF)
+# }
+# NOT RUN {
+# open file "bar.emf" for graphics output
+emf("fig1.emf")
+# produce the desired graph(s)
+plot(fig1)
+dev.off() #turn off device and finalize file
+# }
+
+
 #WAY 2#####################################################
 View(data)
 View(colnames(data))
