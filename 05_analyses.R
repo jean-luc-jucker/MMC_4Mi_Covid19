@@ -17,6 +17,24 @@ data %>% group_by(Region, Q13_1c) %>%
 #nas
 summary(data$c1) #total nas = 9
 
+#GENDER AND AGE####
+data %>% 
+  group_by(Q25) %>% 
+  tally() %>% 
+  mutate(Percent=n/sum(n)*100)
+data %>% 
+  group_by(Region, Q13_1c, Q25) %>% 
+  tally() %>% 
+  mutate(Percent=n/sum(n)*100) %>% filter(Q25=="Female")
+
+
+data %>% 
+  summarise(Mean=mean(Q23))
+data %>% 
+  group_by(Region, Q13_1c) %>% 
+  summarise(Mean=mean(Q23))
+
+
 #INTERVIEWS OVER TIME####
 #bar, with updates cutoff
 data %>% 
@@ -1654,11 +1672,12 @@ data %>%
   group_by(Period, c29) %>% 
   tally() %>% 
   mutate(Percent=round(n/sum(n)*100, digits = 1)) %>% print(n=24)
-data %>% 
+fig18 <- data %>% 
   group_by(Period, c29) %>% 
   tally() %>% 
   mutate(Percent=round(n/sum(n)*100)) %>%
-  filter(!is.na(c29)) %>% 
+  filter(!is.na(c29)) %>%
+  mutate(c29 = recode(c29, "Yes I have changed my intended destination"="Yes, changed destination", "Yes I have changed my planned routes but my intended destination remains the same"="Yes, changed routes", "Yes I have decided to return home"="Yes, decided to return home", "Yes I have stopped here for a time because I am stuck"="Yes, stopped for a while", "Yes other (specify)"=" Yes, other")) %>% 
   ggplot(aes(x=as.factor(Period), y=Percent, color=c29)) +
   geom_line(aes(group=c29), size=2.5)+
   scale_y_continuous(breaks = seq(0, 100, by = 10))+
@@ -1672,15 +1691,7 @@ data %>%
   theme(axis.title = element_text(size = 12))+
   scale_color_brewer(palette = "Paired")+
   theme(panel.border = element_rect(colour = "black", fill=NA, size=0.1))
-
-
-
-
-
-
-
-
-
+fig18
 
 
 
@@ -1722,9 +1733,9 @@ require(devEMF)
 # }
 # NOT RUN {
 # open file "bar.emf" for graphics output
-emf("fig16.emf")
+emf("fig18.emf")
 # produce the desired graph(s)
-plot(fig16)
+plot(fig18)
 dev.off() #turn off device and finalize file
 # }
 
