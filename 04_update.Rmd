@@ -1,0 +1,451 @@
+---
+title: "Impact of COVID-19 on refugees and migrants, Update 4"
+author: "Mixed Migration Centre, 11 June 2020"
+date: ''
+output: github_document
+ 
+---
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tinytex)
+```
+\  
+
+**This is the fourth update on the situation for refugees and migrants on mixed migration routes around the world in light of the COVID-19 pandemic, based on data collected by the [Mixed Migration Centre](http://www.mixedmigration.org/)  in Asia, East Africa, Latin America, North Africa and West Africa. The objective of the global updates is to provide regular up-to-date findings on COVID-19 awareness, knowledge and risk perception, access to information, access to healthcare, assistance needs and the impact on refugees’ and migrants’ lives and migration journeys. Published once every two weeks, this series provides an aggregated overview; more detailed, thematic and response-oriented COVID-19 snapshots are also developed in each of the MMC regional offices and available  [here](http://www.mixedmigration.org/resource-type/covid-19/).**
+
+
+## Key Messages
+• Awareness and knowledge of the disease remain high, with most respondents
+taking measures to protect themselves. However, 18% of respondents in West Africa and an even higher proportion in Somaliland are not taking measures. Among them, 38% are not taking measures because they do not believe it is necessary
+
+• There appear to be some gaps in information: in East Africa, fewer respondents noted that COVID-19 can be asymptomatic than elsewhere, and 67% of respondents in Malaysia believed children under five to be particularly at risk
+
+• The need for assistance remains stable (86%), as does the proportion of respondents receiving assistance (20%, although this is likely to be overreported due to sampling methods). The kind of assistance needed varies across regions
+
+• Perceptions of access to healthcare have not improved overall, although the percentage of respondents in Malaysia who believe they have access is high, at 77%
+
+• 57% of respondents report loss of income, and this figure becomes even more striking when considering that 29% were not receiving an income. 65% report reduced access to work as a result of the COVID-19 crisis 
+
+• The percentage of respondents citing racism and xenophobia has slightly decreased since the previous update (from 20% to 18%). In Malaysia (30%, n=19), Somaliland (23%, n=12) and Tunisia (35%, n=250) higher than average percentages report increasing racism and xenophobia since the outbreak of COVID-19
+
+## Respondents
+
+3,290 respondents were interviewed between 6 April and 25 May 2020, with 238 in Asia, 100 in East Africa, 459 in Latin America, 1,500 in North Africa, and 993 in West Africa, in the following 12 countries. This global update includes 3 newly added countries, including Malaysia, Somaliland and Kenya:
+
+```{r table, echo=FALSE}
+table_demographics <- data.frame(Region=c("Asia", "", "", "East Africa", "", "Latin America", "", "North Africa", "", "West Africa", "", "", "Overall"), Country=c("India", "Indonesia", "Malaysia", "Kenya", "Somaliland", "Colombia", "Peru", "Libya", "Tunisia", "Burkina Faso", "Mali", "Niger", ""), n=c(75, 99, 64, 47, 66, 338, 121, 777, 723, 288, 375, 330, "3,290"), `Percent women` = c(44, 38, 42, 49, 30, 72, 55, 28, 36, 43, 18, 28, 37), `Mean age`=c(33, 29, 26, 32, 31, 34, 32, 30, 28, 28, 27, 31, 30))
+library(knitr)
+kable(table_demographics, align = 'c', col.names = c("Region", "Country", "Number of respondents", "Percent women", "Mean age"))
+
+
+```
+
+In Latin America, all respondents were Venezuelans; in India and Indonesia, all respondents were Afghans;  respondents in Malaysia were Rohingya and Bangladeshi. Respondents in East Africa, North Africa and West Africa were from a wide range of countries.
+
+Although the overall proportion of respondents who stated they had reached the end of their journey (68%) has not changed since the previous update, new data from Asia shows that most respondents in Malaysia (61%, n=39) have reached their destination, compared to no more than 1% in both India and Indonesia. 42% (n=42) of East Africa respondents (and up to 64%, n=34, in Somaliland) reached their destination, which is less than in Latin America (86%), but more than in North Africa (14%) and West Africa (8%).
+
+## Methodology
+
+A summary of the methodology can be found [here](http://www.mixedmigration.org/4mi/4mi_faq/).  The data presented is cumulative, and includes data from previous Global Updates. All figures are rounded to the nearest whole number. Figures for countries where the number of interviews is less than or around 100 should be interpreted with caution. Unless specified, the number of observations for all analyses and visualisations corresponds to those presented in the above table. Note that for most items of the questionnaire, respondents can select several answer options, and in some analyses it was not possible to include ‘none’ answer options. 79 interviews were discarded from analyses due to questionnaire incompleteness or data quality issues.
+
+## Awareness, knowledge and risk perception
+
+As in previous updates, knowledge of the coronavirus is still very high among respondents. Only 5 respondents reported that they had not heard of COVID-19 (1 in East Africa and 4 in North Africa). Likewise, exactly as in the previous update, 92% of all respondents stated that they had seen people acting more cautiously, with a minimum of 88% in West Africa, and a maximum of 94% in Latin America. That said, Somaliland, newly included in this update, had the lowest percentage (81%, n=43).
+
+Similarly, across regions, 89% of respondents agreed or strongly agreed that they are worried about catching coronavirus (range: from 81% in East Africa to 92% in Latin America). Furthermore, respondents were in comparison slightly less worried about transmitting coronavirus (70% overall, with a range from 66% in North Africa to 82% in Asia), with an exception in Malaysia, where respondents seem equally concerned about catching COVID-19 (67%, n=43) as transmitting it (66%, n=42).
+
+84% of all respondents also agreed or strongly agreed that they know how to protect themselves and others, with the same range between regions as in the previous update (from 76% in West Africa to 98% in Latin America), and with the new countries all within this range (Kenya: 92%; Somaliland: 83%; Malaysia: 98%).
+
+Respondents know coronavirus symptoms, with dry cough (84% of all respondents), fever (81%) and difficulties breathing (80%) being cited the most frequently. As in the previous update, only 15% of respondents indicated that the virus can be asymptomatic, but with important differences between regions: from 24% in Asia (Malaysia: 20%) to 4% in East Africa, with only one out of fifty-three respondents knowing this in Somaliland. Likewise, respondents know which groups are more at risk, with older people cited more frequently (82% overall), followed by people who are already ill with another condition (58%), and health workers (32%). However, 21% still cite babies and children under five, who are not a high-risk category, with the highest percentage in Malaysia (67%, n=43), which could have implications for awareness campaigns.
+
+Since the beginning of data collection, the percentage of respondents who report taking measures to protect themselves from catching COVID-19 has not changed: 92% across all regions, with washing hands more regularly (79% overall), wearing a mask (60%), and staying at home (42%) being the most commonly cited1. As previously discussed, the higher proportion of respondents staying at home in Latin America (86%) and Asia (85%) might be explained by the fact that the former have predominantly reached destination (86%, see Profiles section), and the latter might be in a position of long-term involuntary immobility, except for respondents in Malaysia, who are more likely to have reached they destination (61%), compared to those in India and Indonesia.
+
+Likewise, the proportion of respondents reporting not doing anything to protect themselves against coronavirus, at 8% overall, has remained low (Asia and Latin America: less than 1% for each; North Africa: 5%; West Africa: 18%). The newly added region, East Africa, at 18%, is similar to West Africa, and with comparable figures in Somaliland (30%) and Burkina Faso (29%), although note that the number of interviews in Somaliland is still low.
+
+Out of the 272 respondents not taking any measures, 42% stated that this is due to a lack of protective gear (masks, gloves, sanitizer), 38% because they do not feel it is necessary, and 24% because they simply cannot practice physical distancing due to their living situation. In North Africa, no less than 25% of respondents not taking measures stated that they do not know what precautions to take, which was higher than in East Africa (6%) and West Africa (10%). In contrast, in Somaliland, not having access to protective gear was the most cited reason (14 out of 16 respondents), as in the other regions.
+
+Overall, a small majority of respondents (53%, just as in previous update) reported that they are able to keep the 1.5 metre distance, but again with considerably higher percentages in Asia (85%, although note that the figure in Indonesia has decreased from 85% to 78% since previous update) and Latin America (91%) than in North Africa (48%) and West Africa (34%, or a slight increase since the last update), and with East Africa (68%) at an intermediate position, see Figure 1.
+
+
+**_Figure 1: Do you think you are able to practice 1.5 metre distancing?_**
+
+```{r 0, include=FALSE}
+library(tidyverse)
+load("rda/04_cleaned_data_20200528.rda")
+```
+
+```{r 1, echo=FALSE, fig.align='left', fig.height=7, fig.width=7, warning=FALSE}
+fig1_data <- data %>%
+  group_by(Region, c31) %>% 
+  tally() %>% 
+  mutate(Percent=round(n/sum(n)*100, digits = 1))
+fig1  <- fig1_data %>% 
+  mutate(c31=fct_relevel(c31, "Refused", "Don´t know", "No", "Yes")) %>% 
+  ungroup() %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "East Africa", "Asia")) %>% 
+  ggplot(aes(fill=c31, y=Percent))+
+  geom_col(aes(x=Region, y=Percent), width = 0.42)+
+  xlab("")+
+  theme_bw()+
+  labs(caption = "N =
+  Asia:    238
+  East Africa:    100
+  Latin America:    459
+  North Africa: 1,500
+       West Africa:    993")+
+  coord_flip()+
+  scale_y_continuous(breaks = seq(0, 100, by = 10))+
+  theme(legend.title = element_blank())+
+  theme(legend.position = c(0.65, 0.96), legend.direction = "horizontal", legend.title = element_blank())+
+  scale_fill_discrete(guide = guide_legend(reverse = TRUE))
+fig1
+
+```
+\  
+\
+
+Finally, 3% (n=100, or a slight increase since previous update) of all respondents had been tested for coronavirus: 14 in Asia; 9 in East Africa; 11 in Latin America, 22 in North Africa, and 44 in West Africa. Also note that 75 respondents (with most of them in North Africa) declined to answer this question. 
+
+
+## Access to information
+
+As observed in previous updates, and with 47% of all respondents using it, the government is still the most commonly used source of information on COVID-19, followed by the online community (41%), and other migrants (38%). West Africa continues to record ‘other migrants’ far more frequently (57%). There are important differences between regions however, and the inclusion of three new countries in this update had an impact on some results. For example, the government is still more frequently cited in Latin America (70%) than in all other regions, while the percentage in Asia increased from 11% to 23%, which is due to a high percentage of respondents using the government as their source of information in Malaysia (58%, compared to 9% in India and 11% in Indonesia; it should be noted that much of traditional media in Malaysia is state-controlled). Furthermore, in Africa, the overall proportion of respondents is similar across regions (East Africa: 44%, North Africa: 47%, West Africa: 44%), but differences emerge at the country level, which can potentially be explained by the political context and reach of the government: 68% (n=32) use the government in Kenya, but only 23% (n=12) use it in Somaliland.
+
+Overall, the most-used sources of information are also the more trusted, and this holds for the government (44%), followed by health professionals (37%) and NGOs and the UN (27%), see Figure 2. Other trends observed in previous updates remain the same (for example, in North Africa, although the online community is used more, the government is seen as more trustworthy). Regarding the countries newly added in this update, in Malaysia, despite a low number of observations, the government is seen as more trustworthy (61%) than in both India (20%) and Indonesia (15%). Likewise, respondents in Kenya see the government as more trustworthy (72%) than in Somaliland (30%), where health professionals (64%, n=34) are seen as more trustworthy than any other source.
+
+**_Figure 2: Who do you think is a trustworthy source of information on coronavirus?_**
+
+```{r 2, echo=FALSE, fig.align='left', fig.height=8, fig.width=8, warning=FALSE}
+fig2_data <- data %>% 
+  select(205, 206, 96:112) %>% #note this includes 24 nones
+  pivot_longer(cols = 3:19, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region*100, digits = 1))
+fig2  <- fig2_data %>%
+  ungroup() %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "East Africa", "Asia")) %>% 
+  mutate(Answer = reorder(Answer, Percent)) %>% 
+  ggplot(aes(fill=Region))+
+  geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
+  ylab("Percent")+
+  xlab("")+
+  theme_bw()+
+  labs(caption= "N =
+  Asia:     238
+  East Africa:       99
+  Latin America:     459
+  North Africa: 1,493
+       West Africa:    993")+
+  scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
+  coord_flip()+
+  theme(legend.title = element_blank())+
+  theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
+  scale_fill_discrete(guide = guide_legend(reverse = TRUE))
+fig2
+
+```
+
+\  
+\
+
+Respondents in Asia still have more trust in NGOs and the UN (50%, or an increase of 9% since the previous update) than other regions (range: 14% to 33%), and respondents in West Africa still have more trust in friends and family and other migrants than in other regions, with similar figures as in previous updates.
+
+Most respondents received information on the virus via mainstream media (69%
+overall), social media (61%), or in-person (47%), which as previously discussed reflects the most-used sources of information.1 That said, if respondents in Asia still report receiving more information via social media (79%, or a slight decrease from previous update due to the inclusion of Malaysia), respondents in East Africa are quite under the overall percentage (34%, n=34), which is due to a very low percentage of respondents using social media in Somaliland (17%, n=9). Furthermore, in-person communication remains highest in West Africa (59%), which is less than mainstream media (71%), but more than social media (50%), contrary to all other regions. Out of all respondents who reported using social media (n=2,003), 86% and 84% reported using Facebook and WhatsApp, respectively, a proportion that has not changed since the first update.
+
+\
+
+
+## Access to healthcare and prevention
+
+Overall, 38% of respondents believe they would be able to access healthcare if they had COVID-19 symptoms, with a minimum of 28% in North Africa, and a maximum of 48% in both West Africa (as in previous update) and Asia (an increase of 10%, due to the high figure of 77% in Malaysia), and with East Africa at an intermediate position (33%, due to the low figure of Somaliland at 26%).
+
+At 30% overall, the proportion of respondents who don’t know whether they would be able to access healthcare has slightly increased, with the highest regional percentages in the Middle East (39%) and North Africa (27%). The largest differences in perception of access to healthcare are within regions (52% believe they do in Colombia, against 16% in Peru; 60% in Niger, against 39% in Burkina Faso).
+
+Since the beginning of data collection, the main barriers to accessing healthcare cited by respondents are a lack of money (38% overall), followed by not knowing where to go (25%), and discrimination against foreigners (23%), see Figure 3. Discrimination against foreigners remains the most frequently cited barrier in North Africa (36%), and especially in Tunisia (49%), but no longer in Peru, where a lack of money (48%) is now the most cited barrier and discrimination has dropped from 50% of respondents in the last Global Update to 45%. In Malaysia, discrimination is reported as a barrier among the majority of respondents who say they cannot access health services. 
+
+**_Figure 3: What are the barriers to accessing healthcare?_**
+
+```{r 3, echo=FALSE, fig.align='left', fig.height=8, fig.width=8, warning=FALSE}
+fig3_data  <- data %>% 
+  select(205, 206, 115:128) %>%
+  pivot_longer(cols = 3:16, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region*100, digits = 1))
+
+fig3  <- fig3_data %>% 
+  ungroup() %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "East Africa", "Asia")) %>% 
+  mutate(Answer = recode(Answer, 
+                          'Discrimination against foreigners limits access to services' = "Discrimination against foreigners",
+                          'General insecurity and conflict prevent me from accessing healthcare' = "General insecurity",
+                          'I am afraid of being reported to authorities, or arrest, or deportation' = "Afraid of being reported",
+                          'I don\'t have the money to pay for health services' = "I don't have the money",
+                          'I don\'t have the right or the legal documentation to access health services here' = "I don't have the right/documentation",
+                          'The advice for testing and treating coronavirus is unclear here' = "The advice is unclear here",
+                          'Services are overwhelmed and access is difficult for everyone' = "Services are overwhelmed",
+                          'I don\'t know where to go for healthcare' = "I don't know where to go", 'Other (specify)'="Other")) %>% 
+  mutate(Answer = reorder(Answer, Percent)) %>% 
+  ggplot(aes(fill=Region))+
+  geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
+  ylab("Percent")+
+  xlab("")+
+  theme_bw()+
+  labs(caption= "N =
+  Asia:     238
+  East Africa:       99
+  Latin America:     459
+  North Africa: 1,493
+       West Africa:    993")+
+  scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
+  scale_x_discrete(limits=c("Refused", "None", "Other", "Don't know", "General insecurity", "There are no health services here", "Services are overwhelmed", "The advice is unclear here", "Afraid of being reported", "I don't speak the language", "Discrimination against foreigners", "I don't have the right/documentation", "I don't know where to go", "I don't have the money"))+
+   coord_flip()+
+  theme(legend.title = element_blank())+
+  theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
+  scale_fill_discrete(guide = guide_legend(reverse = TRUE))
+fig3
+```
+\  
+\
+
+A lack of legal documentation is still an important barrier in Colombia (57%), as well asin one of the countries added to this update, Kenya (55%, n=26, compared to 19% in Somaliland and only 3% in Malaysia). Furthermore, with a now slightly larger sample size in India, not speaking the language as a barrier has slightly decreased from 33% to 27%, and is still somewhat important in Tunisia (17%). Finally, Libya is still the country where general insecurity is cited more often (7%), but with a slight decrease since the previous
+update (9%). 
+\
+
+
+
+## Assistance needs
+
+Despite the addition of three countries in this update, the percentage of respondents who stated that they are in need of extra help has remained remarkably stable: 86% (n=2,835), with only marginal differences between regions (range: 83% to 89%), and only 11% (compared to 10% in previous update) of all respondents stating that they do not need extra help.
+
+As in the last two updates, the most frequently cited need was cash (77% overall). Basic needs (food, water, shelter) were the second most-cited item (58%), but note that this need has tended to decrease over the last 3 updates (1st update: 76%, 2nd update: 69%, 3rd update: 60%). The third most-cited items are still sanitizer, masks, and gloves (41%). The pattern of needs between regions is similar to that discussed in the previous update (cash is cited more in North Africa and West Africa than in Latin America, Asia has a higher need for access to health services and also psychological support), see Figure 4. One potential new finding concerns access to work and livelihoods, which is higher in East Africa (45%, n=40) than in any other region (range: 20% to 27%), although this will need to be confirmed when more interviews will be available in this region. East Africa respondents also mention access to health services more often than the other regions (35%, n=31), except those in Asia (40%), but mention sanitary items (18%) less often than in the other regions, except Latin America (13%).
+
+Overall, 20% of all respondents (n=668) stated that they had received additional assistance since the coronavirus crisis began, which is very similar to the 21% reported in the previous update. Figures were still higher in Latin America (32%) and Asia (33%, or an increase of 8% since the previous update) than in West Africa (19% exactly as in previous update) and North Africa (16%).
+
+The 668 respondents who received extra assistance most often mentioned basic needs (food, water, and shelter, 66%), followed by sanitary items (29%) and cash (24%, a slight increase from 21% in the previous update). As can be seen in Figure 4, and other than cash, the bigger gaps in assistance concern health services (all regions), access to work (especially in East Africa), and documentation (all regions). In contrast, needs seem well met in terms of childcare, and information (except marginally in Asia), and above all in terms of food, water and shelter.
+
+\
+**_Figure 4: Kind of assistance received (bars) vs. assistance needed (lines)_**
+
+```{r 4, echo=FALSE, fig.align='left', fig.height=9, fig.width=9, warning=FALSE}
+fig4_received <- data %>% 
+  filter(c23 == "Yes") %>%#discard those that didn't receive help
+  group_by(Region, .drop = FALSE) %>% 
+  mutate(N_region_part = length(Region)) %>% #get n by region
+  select(205, 208, 131:143) %>%
+  pivot_longer(cols = 3:15, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region_part) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region_part*100, digits = 1))
+
+fig4_needed  <- data %>% 
+  filter(c26 == "Yes") %>% #discard those that don't need extra help
+  group_by(Region, .drop = FALSE) %>% 
+  mutate(N_region_part = length(Region)) %>% #get n by region
+  select(205, 208, 157:169) %>%
+  pivot_longer(cols = 3:15, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region_part) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region_part*100, digits = 1))
+
+fig4  <- fig4_received %>% 
+  ungroup() %>% 
+  ggplot(aes(fill=Region))+
+  geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
+  ylab("Percent")+
+  xlab("")+
+  theme_bw()+
+  labs(caption = "Number of respondents
+  Asia: received = 78, needed = 205
+  East Africa: received = 10, needed = 89
+  Latin America: received = 146, needed = 408
+  North Africa: received = 245, needed = 1.252
+       West Africa: received = 189, needed = 881")+
+  scale_y_continuous(breaks = seq(0, 100, by = 10)) + 
+  theme(legend.title = element_blank())+
+  theme(legend.position = "none")+
+  theme(axis.text.x = element_text(angle = 40, hjust = 1))+
+  facet_grid(rows = vars(Region))+
+  geom_point(data = fig4_needed, aes(x=Answer, y=Percent))+
+  geom_line(data = fig4_needed, aes(x=Answer, y=Percent, group=Region))+
+  scale_x_discrete(labels=c("Access to health services"="Health services", "Distribution of sanitary items (sanitizer/ mask/ gloves/ etc)"="Sanitizer, masks, gloves", "Cash to pay for health services"="Cash for health services", "Documentation to access health services"="Documentation", "Information about the virus: symptoms/ what to do if I have symptoms/ how to protect myself"="Information", "Other basic needs: food, water, shelter"="Food, water, shelter", "Access to work and livelihoods"="Access to work", "Psychological assistance"="Psychological support", "Other (specify)"="Other"))+
+  scale_fill_manual(values=c("#DC71FA", "#00B8E5", "#00BE6C","#A3A500", "#F8766D"))
+fig4
+```
+\  
+\
+
+The main providers of additional assistance are still NGOs (45%, which is higher than in the previous update), the local population (25%), and for the first time fellow migrants (18%), now cited as often as the government (just under 18%). Assistance from the UN is still far higher in Asia (63%) than in all other regions, but support from the UN also seem high in Somaliland (10 out of 10 respondents), although not in Kenya (0 respondents).
+
+
+## Impact on refugees’ and migrants’ lives
+
+In line with previous updates, the main impact of COVID-19 on refugees’ and migrants’ lives is reduced access to work (65%), followed by more stress (57%), and reduced availability of basic goods (49%). Although the percentage of respondents citing increased racism and xenophobia (18%) has slightly decreased since the previous update (20%), it is mentioned by 30% (n=19) of respondents in Malaysia – notably higher than in India (4%) and Indonesia (2%) – and also 23% (n=12) in Somaliland. Likewise, increased racism and xenophobia is mentioned more often in Tunisia (35%) than in Libya (14%). while the top 3 impacts are reduced access to work, more stress, and reduced availability of basic goods, these are not ranked in the same order in regions, see Figure 5.
+
+
+\
+
+**_Figure 5: What impact has the crisis had on your day-to-day life?_**
+
+```{r 5, echo=FALSE, fig.align='left', fig.height=8, fig.width=8, warning=FALSE}
+fig5_data  <- data %>% 
+  select(205, 206, 171:178) %>% #includes 60 none
+  pivot_longer(cols = 3:10, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region*100, digits = 1))
+fig5 <- fig5_data %>% 
+  ungroup() %>% 
+  mutate(Answer = recode(Answer, 'Other (specify)' = "Other")) %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "East Africa", "Asia")) %>% 
+  mutate(Answer = reorder(Answer, Percent)) %>% 
+  ggplot(aes(fill=Region))+
+  geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
+  ylab("Percent")+
+  xlab("")+
+  theme_bw()+
+  labs(caption= "N =
+  Asia:     238
+  East Africa:       99
+  Latin America:     459
+  North Africa: 1,493
+       West Africa:    993")+
+  scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
+  coord_flip()+
+  theme(legend.title = element_blank())+
+  theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
+  scale_fill_discrete(guide = guide_legend(reverse = TRUE))
+fig5
+
+
+```
+\  
+\
+
+57% of all respondents also cited a loss of income due to coronavirus restrictions, a figure that has slightly decreased since the last update (-3%). The highest percentage was still in Latin America (90%), and although the lowest percentage was still in Asia (45%), a higher proportion of respondents in Malaysia (64%, n=41) and India (70%) had lost income than in Indonesia (13%), where most respondents (87%) were not working before the crisis. Similarly, in East Africa, the proportion of respondents losing their income (49%) was mediated by a relatively large proportion of them (44%) not working before the crisis. The highest percentages of people continuing to work despite COVID-19 restrictions are found in Mali and Niger (18% and 20%, respectively).
+
+For the 1,875 respondents who lost income, the main impact was the inability to afford basic goods (65%), increased worry and anxiety (55%), and inability to pay remittances (38%) and continue the journey (35%), see Figure 6. Some differences between regions that were discussed in the previous update still hold (for example, inability to send remittances is much lower in Asia than in other regions, probably because few of these respondents were sending remittances before the crisis). Here we note that the highest impact in East Africa was the inability to afford basic goods (80%), while this seems less of an issue in West Africa (33%), where being unable to continue the journey (59%) remained higher than in any other region. Finally, in Malaysia, loss of housing (63%, n=26) was more frequent than in India (10%), while the contrary was true for anxiety (Malaysia: 37%, India: 92%).
+
+\
+
+**_Figure 6: What impact has the loss of income had?_**
+
+```{r 6, echo=FALSE, fig.align='left', fig.height=8, fig.width=8, warning=FALSE}
+fig6_data <- data %>% 
+  filter(c21 == "Yes") %>% #discard those that didn't lose income
+  group_by(Region) %>% 
+  mutate(N_region_part = length(Region)) %>% #get n by region
+  select(205, 208, 181:188) %>%
+  pivot_longer(cols = 3:10, names_to = "Options", values_to = "Answer") %>% 
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region_part) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region_part*100, digits = 1))
+fig6 <- fig6_data %>% 
+  ungroup() %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "East Africa", "Asia")) %>% 
+  mutate(Answer = recode(Answer, 'Other (specify)' = "Other")) %>% 
+  mutate(Answer = reorder(Answer, Percent)) %>% 
+  ggplot(aes(fill=Region))+
+  geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
+  ylab("Percent")+
+  xlab("")+
+  theme_bw()+
+  labs(caption= "N =
+  Asia:     238
+  East Africa:       99
+  Latin America:     459
+  North Africa: 1,493
+       West Africa:    993")+
+  scale_y_continuous(breaks = seq(0, 100, by = 5)) + 
+  scale_x_discrete(limits=c("Refused", "None", "Other", "Loss of housing", "I am unable to continue my journey", "I am unable to pay remittances", "I am unable to afford basic goods", "Increased worry and anxiety"))+
+  coord_flip()+
+  theme(legend.title = element_blank())+
+  theme(legend.position = c(0.80, 0.15), legend.direction = "vertical", legend.title = element_blank())+
+  scale_fill_discrete(guide = guide_legend(reverse = TRUE))
+fig6
+
+```
+
+
+## Impact on migration journeys
+
+In line with previous updates, the impact of COVID-19 on migration journeys differed substantially between regions, see Figure 7. Overall, respondents cited increased difficulty moving around inside countries (40%) or crossing borders (39%), or simply being too afraid to either continue their journey or return home (18%). Furthermore, as in the previous update, a number of respondents also stated that the crisis had no impact on their journey (22%), with this figure reaching 59% (n=59) in East Africa. Note that relatively high proportion of repondents in East Africa have reached the end of their journey. 
+ 
+
+\
+
+**_Figure 7: What impact has the coronavirus crisis had on your migration journey?_**
+
+```{r 7, echo=FALSE, fig.align='left', fig.height=8, fig.width=8, warning=FALSE}
+fig7_data <- data %>% 
+  select(205, 206, 190:200) %>%
+  pivot_longer(cols = 3:13, names_to = "Options", values_to = "Answer") %>%
+  filter(!is.na(Answer)) %>% 
+  group_by(Region, N_region) %>% 
+  count(Answer) %>% 
+  mutate(Percent = round(n/N_region*100, digits = 1))
+fig7 <- fig7_data %>% 
+  ungroup() %>% 
+  mutate(Answer = recode(Answer, 'Other (specify)' = "Other", 'I\'ve been delayed because I was sick, or because I had to stop and take care of people who got sick' = "Delayed because I or other people were sick",
+                         'I feel too afraid to move (to continue my journey or return)' = "I feel to afraid to move",
+                         'Increased difficulty moving around inside countries'="Increased difficulty moving around",
+                         'I was going to be resettled, but this is now delayed'="About to be resettled, but now delayed",
+                         'Disembarked / deported back to previous country'="Deported back to previous country")) %>% 
+  mutate(Region=fct_relevel(Region, "West Africa", "North Africa", "Latin America", "East Africa", "Asia")) %>% 
+  mutate(Answer = reorder(Answer, Percent)) %>% 
+  ggplot(aes(fill=Region))+
+  geom_col(aes(x=Answer, y=Percent), width = 0.6, position = position_dodge2(preserve = "single", padding = 0))+
+  ylab("Percent")+
+  xlab("")+
+  theme_bw()+
+  labs(caption= "N =
+  Asia:     238
+  East Africa:       99
+  Latin America:     459
+  North Africa: 1,493
+       West Africa:    993")+
+  scale_y_continuous(breaks = seq(0, 100, by = 5)) +
+  scale_x_discrete(limits=c("Refused", "None", "Other", "Delayed because I or other people were sick", "Deported back to previous country", "About to be resettled, but now delayed", "Reduced access to smugglers", "Increased risk of detention and deportation", "I feel to afraid to move", "Increased difficulty moving around", "Increased difficulty crossing borders"))+
+  coord_flip()+
+  theme(legend.title = element_blank())+
+  theme(legend.position = c(0.80, 0.375), legend.direction = "vertical", legend.title = element_blank())+
+  scale_fill_discrete(guide = guide_legend(reverse = TRUE))
+fig7
+
+```
+
+\  
+\
+
+Exactly half of all respondents stated that they had not changed their plans as a result of the coronavirus outbreak, but again with much higher figures in Asia (77%, although this is 12% less than in the previous update, due to a relatively low figure, 45%, in Malaysia) and Latin America (71%), than in North Africa (44%) and West Africa (43%). 
+
+Overall, few respondents changed their intended destination (2%) or route (11%), which is identical to the previous update. Overall, 7% decided to return home, with a maximum of 24% of Venezuelan respondents in Peru, and also a slightly higher percentage in Colombia (14%) than in the previous update (12%). The highest percentages of respondents reporting being stuck for a time were again in Libya (35%) and Niger (42%), but the figure was also high in one of the new countries, Kenya (34%), suggesting that these respondents are also primarily in ‘transit’, possibly along the so-called Southern route from the Horn of Africa towards South Africa.
+
+\
+  
+### Acknowledgement 
+
+The owner and source of the data used for this study is the [Mixed Migration Centre](http://www.mixedmigration.org/), and this study has been published first [here](http://www.mixedmigration.org/resource-type/covid-19/) on 11 June 2020. Data analyst: Jean-Luc Jucker, PhD  
+\  
+\  
+\  
+\  
+
+
+
+
+
+
