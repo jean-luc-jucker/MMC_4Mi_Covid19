@@ -2,10 +2,7 @@ Impact of COVID-19 on refugees and migrants, Update 4
 ================
 Mixed Migration Centre, 11 June 2020
 
-<style>
-body {
-text-align: justify}
-</style>
+>
 
  
 
