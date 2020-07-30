@@ -36,7 +36,7 @@ library(tinytex)
 
 2,110 respondents were interviewed between 6 April and 10 May 2020: 126 in Asia, 382 in Latin America, 957 in North Africa, and 645 in West Africa. In West Africa and North Africa respondents come from a variety of origin countries, while only Venezuelans are interviewed in Latin America, and only Afghans in Asia. Interviews took place in the following 9 countries:
 
-```{r table, echo=FALSE}
+```{r table, echo=FALSE, warning=FALSE}
 table_demographics <- data.frame(Region=c("Asia", "", "Latin America", "", "North Africa", "", "West Africa", "", "", "Overall"), Country=c("India", "Indonesia","Colombia", "Peru", "Libya", "Tunisia", "Burkina Faso", "Mali", "Niger", ""), n=c(58, 68, 292, 90, 442, 515, 204, 234, 207, 2110), `Percent women` = c(43, 40, 72, 54, 29, 35, 41, 18, 28, 38), `Mean age`=c(34, 28, 34, 33, 30, 28, 28, 27, 31, 30))
 library(knitr)
 kable(table_demographics, align = 'c', col.names = c("Region", "Country", "Number of respondents", "Percent women", "Mean age"))
@@ -73,7 +73,7 @@ library(tidyverse)
 load("rda/03_cleaned_data_20200512.rda")
 ```
 
-```{r 1, echo=FALSE, fig.align='left', fig.height=7, fig.width=7}
+```{r 1, echo=FALSE, fig.align='left', fig.height=7, fig.width=7, warning=FALSE}
 fig1_data <- data %>%
   group_by(Region, c31) %>% 
   tally() %>% 

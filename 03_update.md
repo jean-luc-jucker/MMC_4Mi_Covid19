@@ -2,8 +2,6 @@ Impact of COVID-19 on refugees and migrants, Update 3
 ================
 Mixed Migration Centre, 27 May 2020
 
-
-
  
 
 **This is the third update on the situation for refugees and migrants on
@@ -162,9 +160,6 @@ keep the 1.5 metre distance, but again with higher percentages in Asia
 
 ***Figure 1: Do you think you are able to practice 1.5 metre
 distancing?***
-
-    ## Warning: Factor `c31` contains implicit NA, consider using
-    ## `forcats::fct_explicit_na`
 
 <img src="03_update_files/figure-gfm/1-1.png" style="display: block; margin: auto auto auto 0;" />
    
