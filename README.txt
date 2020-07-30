@@ -6,6 +6,6 @@ For each update, _preparation denotes the file used to prepare the data, whereas
 
 All figures are in the folders _update_files.
 
-Rmd and md files contain the reports.
+Rmd and md files contain the reports. Readers unfamiliar with R should read the reports with the .md extension.
 
 Actual data belongs to the MMC and is not shared here. Please also read acknowledgements at the end of each report.
