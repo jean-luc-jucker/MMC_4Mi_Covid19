@@ -421,7 +421,7 @@ As shown in Figure 7, cash is the most reported need. The need has grown between
 
 Sanitary/PPE items such as sanitizer, masks, and gloves, which were overall the third most-cited need, is also the only need that has clearly tended to decrease over time (from 42% in the first period to 30% in the last period), see Figure 7, which is in line with the slightly decreasing proportion of respondents concerned about transmitting the virus.
 
-**_Figure 8: Types of assistance needed, over time_**
+**_Figure 8:  Percentage of respondents who cite cash as extra assistance needed, over time_**
 
 ```{r 8, echo=FALSE, fig.align='left', fig.height=8, fig.width=8, warning=FALSE}
 c27 <- data %>% ungroup() %>% #need to ungroup first, which is odd
@@ -464,7 +464,7 @@ fig9
 
 As highlighted in previous updates, although more than 85% of all participants consistently state that they need extra assistance, less than 25% actually received such extra assistance since beginning of data collection. However, an encouraging trend is emerging when analysing the data over time. Although assistance received was stable in the first two periods (20% and 21%, respectively), it has clearly increased in the last period, with 33% (n=294) of respondents reporting to have benefited from it. Furthermore, assistance received has increased in all regions (Figure 9), except in East Africa (from 19% to 3%), although the number of interviews is low in this region.
 
-**_Figure 9: Types of assistance needed, over time_**
+**_Figure 9: Percentage of respondents who received extra assistance, over time_**
 
 ```{r 9, echo=FALSE, fig.align='left', fig.height=8, fig.width=8, warning=FALSE}
 c23 <- data %>%
@@ -551,7 +551,7 @@ fig17
 This trend is reflected in respondents increasingly reporting that they have not changed their plans as a result of the coronavirus outbreak (from 50% to 57%), while the proportion of respondents who stopped for a while is decreasing (from 24% to 18%), see Figure 11. 
 \
 
-**_Figure 11: What impact has the loss of income had?_**
+**_Figure 11: Impacts of coronavirus crisis on plans, over time_**
 
 ```{r 11, echo=FALSE, fig.align='left', fig.height=8, fig.width=9, warning=FALSE}
 

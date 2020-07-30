@@ -276,7 +276,8 @@ clearly tended to decrease over time (from 42% in the first period to
 slightly decreasing proportion of respondents concerned about
 transmitting the virus.
 
-***Figure 8: Types of assistance needed, over time***
+***Figure 8: Percentage of respondents who cite cash as extra assistance
+needed, over time***
 
 <img src="05_update_files/figure-gfm/8-1.png" style="display: block; margin: auto auto auto 0;" />
    
@@ -292,7 +293,8 @@ from it. Furthermore, assistance received has increased in all regions
 (Figure 9), except in East Africa (from 19% to 3%), although the number
 of interviews is low in this region.
 
-***Figure 9: Types of assistance needed, over time***
+***Figure 9: Percentage of respondents who received extra assistance,
+over time***
 
 <img src="05_update_files/figure-gfm/9-1.png" style="display: block; margin: auto auto auto 0;" />
    
@@ -338,7 +340,7 @@ have not changed their plans as a result of the coronavirus outbreak
 (from 50% to 57%), while the proportion of respondents who stopped for a
 while is decreasing (from 24% to 18%), see Figure 11.  
 
-***Figure 11: What impact has the loss of income had?***
+***Figure 11: Impacts of coronavirus crisis on plans, over time***
 
 <img src="05_update_files/figure-gfm/11-1.png" style="display: block; margin: auto auto auto 0;" />
 
